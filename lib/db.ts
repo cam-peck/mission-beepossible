@@ -10,17 +10,4 @@ if (!db) {
     })
 }
 
-async function test() {
-    if (db === undefined) return;
-    const sql = `
-      INSERT INTO "test" ("test")
-      VALUES ($1)
-      RETURNING *
-      `;
-    const params = ["Jason Derulo"];
-    const result = await db.query(sql, params);
-    console.log(result);
-}
-    
-
-test();
+export default db;

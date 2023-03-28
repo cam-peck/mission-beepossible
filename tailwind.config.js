@@ -17,6 +17,12 @@ module.exports = {
         },
         boxShadow: {
           'sun': '0 0 50px 10px rgb(241 241 152)'
+        },
+        keyframes: {
+          circle: {
+            '0%': { transform: 'rotateX(80deg) rotateZ(0)' },
+            '100%': { transform: 'rotateX(80deg) rotateZ(360deg)' }
+          }
         }
       },
     },

@@ -11,160 +11,164 @@
     box-shadow: inset 10px -10px 20px 20px rgb(0 0 0 / 20.7%);
   }
 
-    .mercury {
-      background-image:
-        radial-gradient(circle at 8% 25%, rgb(147 147 147) 10%, transparent 10%),
-        radial-gradient(circle at 40% 70%, rgb(147 147 147) 15%, transparent 15%),
-        radial-gradient(circle at 60% 10%, rgb(147 147 147) 5%, transparent 5%),
-        radial-gradient(circle at 80% 51%, rgb(147 147 147) 4%, transparent 4%);
-    }
+  .preserve {
+    transform-style: preserve-3d;
+  }
 
-    .venus {
-      background-image:
-        radial-gradient(circle at 8% 25%, rgb(126 87 60) 5%, transparent 5%),
-        radial-gradient(circle at 30% 70%, rgb(126 87 60) 10%, transparent 10%),
-        radial-gradient(circle at 60% 10%, rgb(126 87 60) 5%, transparent 5%),
-        radial-gradient(circle at 70% 70%, rgb(126 87 60) 3%, transparent 3%),
-        radial-gradient(circle at 80% 30%, rgb(126 87 60) 2%, transparent 2%),
-        radial-gradient(circle at 80% 51%, rgb(126 87 60) 4%, transparent 4%);
-    }
+  .mercury {
+    background-image:
+      radial-gradient(circle at 8% 25%, rgb(147 147 147) 10%, transparent 10%),
+      radial-gradient(circle at 40% 70%, rgb(147 147 147) 15%, transparent 15%),
+      radial-gradient(circle at 60% 10%, rgb(147 147 147) 5%, transparent 5%),
+      radial-gradient(circle at 80% 51%, rgb(147 147 147) 4%, transparent 4%);
+  }
 
-    .earth {
-      background-image:
-        radial-gradient(ellipse at 12% 15%, rgb(61 191 52) 15%, transparent 5%),
-        radial-gradient(circle at 30% 58%, rgb(61 191 52) 10%, transparent 10%),
-        radial-gradient(ellipse at 30% 50%, rgb(61 191 52) 15%, transparent 15%),
-        radial-gradient(circle at 28% 62%, rgb(61 191 52) 8%, transparent 8%),
-        radial-gradient(ellipse at 24% 68%, rgb(61 191 52) 5%, transparent 5%),
-        radial-gradient(circle at 60% 0, rgb(255 255 255) 5%, transparent 5%),
-        radial-gradient(circle at 30% 100%, rgb(255 255 255) 9%, transparent 9%),
-        radial-gradient(circle at 80% 30%, rgb(61 191 52) 20%, transparent 20%),
-        radial-gradient(ellipse at 90% 60%, rgb(61 191 52) 15%, transparent 15%);
-    }
+  .venus {
+    background-image:
+      radial-gradient(circle at 8% 25%, rgb(126 87 60) 5%, transparent 5%),
+      radial-gradient(circle at 30% 70%, rgb(126 87 60) 10%, transparent 10%),
+      radial-gradient(circle at 60% 10%, rgb(126 87 60) 5%, transparent 5%),
+      radial-gradient(circle at 70% 70%, rgb(126 87 60) 3%, transparent 3%),
+      radial-gradient(circle at 80% 30%, rgb(126 87 60) 2%, transparent 2%),
+      radial-gradient(circle at 80% 51%, rgb(126 87 60) 4%, transparent 4%);
+  }
 
-    .mars {
-      background-image:
-        radial-gradient(circle at 20% 5%, rgb(119 34 34) 15%, transparent 0),
-        radial-gradient(circle at 30% 100%, rgb(119 34 34) 15%, transparent 0),
-        radial-gradient(circle at 60% 110%, rgb(119 34 34) 15%, transparent 0),
-        radial-gradient(circle at 40% 40%, rgb(119 34 34) 18%, transparent 0),
-        radial-gradient(ellipse at 55% 50%, rgb(119 34 34) 20%, transparent 0),
-        radial-gradient(circle at 45% 0, rgb(119 34 34) 10%, transparent 0);
-    }
+  .earth {
+    background-image:
+      radial-gradient(ellipse at 12% 15%, rgb(61 191 52) 15%, transparent 5%),
+      radial-gradient(circle at 30% 58%, rgb(61 191 52) 10%, transparent 10%),
+      radial-gradient(ellipse at 30% 50%, rgb(61 191 52) 15%, transparent 15%),
+      radial-gradient(circle at 28% 62%, rgb(61 191 52) 8%, transparent 8%),
+      radial-gradient(ellipse at 24% 68%, rgb(61 191 52) 5%, transparent 5%),
+      radial-gradient(circle at 60% 0, rgb(255 255 255) 5%, transparent 5%),
+      radial-gradient(circle at 30% 100%, rgb(255 255 255) 9%, transparent 9%),
+      radial-gradient(circle at 80% 30%, rgb(61 191 52) 20%, transparent 20%),
+      radial-gradient(ellipse at 90% 60%, rgb(61 191 52) 15%, transparent 15%);
+  }
 
-    .jupiter {
-      background-image:
-        radial-gradient(ellipse at 70% 70%, rgb(231 63 63) 10%, transparent 0),
-        linear-gradient(5deg,
-          rgb(213 64 64) 10%,
-          rgb(240 173 49) 0%,
-          rgb(240 173 49) 30%,
-          rgb(255 166 0) 30%,
-          rgb(255 166 0) 70%,
-          rgb(255 166 0) 70%,
-          rgb(255 195 84) 70%);
-    }
+  .mars {
+    background-image:
+      radial-gradient(circle at 20% 5%, rgb(119 34 34) 15%, transparent 0),
+      radial-gradient(circle at 30% 100%, rgb(119 34 34) 15%, transparent 0),
+      radial-gradient(circle at 60% 110%, rgb(119 34 34) 15%, transparent 0),
+      radial-gradient(circle at 40% 40%, rgb(119 34 34) 18%, transparent 0),
+      radial-gradient(ellipse at 55% 50%, rgb(119 34 34) 20%, transparent 0),
+      radial-gradient(circle at 45% 0, rgb(119 34 34) 10%, transparent 0);
+  }
 
-    .saturn {
-      background-image:
-        linear-gradient(175deg,
-          rgb(240 163 78) 20%,
-          rgb(253 220 161) 20%,
-          rgb(253 220 161) 28%,
-          rgb(222 100 16) 28%,
-          rgb(222 100 16) 36%,
-          rgb(230 135 26) 36%,
-          rgb(230 135 26) 38%,
-          rgb(222 100 16) 38%,
-          rgb(222 100 16) 46%,
-          rgb(253 220 161) 46%,
-          rgb(253 220 161) 75%,
-          rgb(230 135 26) 75%,
-          rgb(230 135 26) 80%,
-          rgb(240 163 78) 80%);
-      position: relative;
-      transform-style: preserve-3d;
-    }
+  .jupiter {
+    background-image:
+      radial-gradient(ellipse at 70% 70%, rgb(231 63 63) 10%, transparent 0),
+      linear-gradient(5deg,
+        rgb(213 64 64) 10%,
+        rgb(240 173 49) 0%,
+        rgb(240 173 49) 30%,
+        rgb(255 166 0) 30%,
+        rgb(255 166 0) 70%,
+        rgb(255 166 0) 70%,
+        rgb(255 195 84) 70%);
+  }
 
-    .saturn-ring {
-      position: absolute;
-      width: 200%;
-      top: -50%;
-      aspect-ratio: 1 / 1;
-      border-radius: 100%;
-      background-image:
-        radial-gradient(circle at center,
-          transparent 40%,
-          rgb(222 100 16) 40%,
-          rgb(222 100 16) 50%,
-          rgb(253 220 161) 50%,
-          rgb(253 220 161) 60%,
-          rgb(222 100 16) 60%);
-      transform: rotateX(80deg) rotateY(-10deg);
-      box-shadow: 0 10px 20px 20px rgb(0 0 0 / 20.7%);
-    }
+  .saturn {
+    background-image:
+      linear-gradient(175deg,
+        rgb(240 163 78) 20%,
+        rgb(253 220 161) 20%,
+        rgb(253 220 161) 28%,
+        rgb(222 100 16) 28%,
+        rgb(222 100 16) 36%,
+        rgb(230 135 26) 36%,
+        rgb(230 135 26) 38%,
+        rgb(222 100 16) 38%,
+        rgb(222 100 16) 46%,
+        rgb(253 220 161) 46%,
+        rgb(253 220 161) 75%,
+        rgb(230 135 26) 75%,
+        rgb(230 135 26) 80%,
+        rgb(240 163 78) 80%);
+    position: relative;
+    transform-style: preserve-3d;
+  }
 
-    .uranus {
-      background-image:
-        linear-gradient(to bottom,
-          rgb(128 204 196) 20%,
-          rgb(174 237 227) 20%,
-          rgb(174 237 227) 25%,
-          rgb(71 198 179) 25%,
-          rgb(71 198 179) 30%,
-          rgb(120 206 195) 30%,
-          rgb(120 206 195) 60%,
-          rgb(71 198 179) 60%,
-          rgb(71 198 179) 70%,
-          rgb(123 205 195) 70%,
-          rgb(123 205 195) 80%,
-          rgb(89 181 176) 80%,
-          rgb(89 181 176) 90%,
-          rgb(177 233 224) 0);
-      position: relative;
-      transform-style: preserve-3d;
-    }
+  .saturn-ring {
+    position: absolute;
+    width: 200%;
+    top: -50%;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    background-image:
+      radial-gradient(circle at center,
+        transparent 40%,
+        rgb(222 100 16) 40%,
+        rgb(222 100 16) 50%,
+        rgb(253 220 161) 50%,
+        rgb(253 220 161) 60%,
+        rgb(222 100 16) 60%);
+    transform: rotateX(80deg) rotateY(-10deg);
+    box-shadow: 0 10px 20px 20px rgb(0 0 0 / 20.7%);
+  }
 
-    .uranus-ring {
-      position: absolute;
-      width: 170%;
-      top: -55%;
-      aspect-ratio: 1 / 1;
-      border-radius: 100%;
-      background-image:
-        radial-gradient(circle at center,
-          transparent 40%,
-          rgb(64 115 106) 40%,
-          rgb(177 233 224) 43%,
-          rgb(177 233 224) 64%,
-          rgb(66 114 106) 98%);
-      transform: rotateX(100deg);
-      box-shadow: 0 10px 20px 20px rgb(0 0 0 / 20.7%);
-    }
+  .uranus {
+    background-image:
+      linear-gradient(to bottom,
+        rgb(128 204 196) 20%,
+        rgb(174 237 227) 20%,
+        rgb(174 237 227) 25%,
+        rgb(71 198 179) 25%,
+        rgb(71 198 179) 30%,
+        rgb(120 206 195) 30%,
+        rgb(120 206 195) 60%,
+        rgb(71 198 179) 60%,
+        rgb(71 198 179) 70%,
+        rgb(123 205 195) 70%,
+        rgb(123 205 195) 80%,
+        rgb(89 181 176) 80%,
+        rgb(89 181 176) 90%,
+        rgb(177 233 224) 0);
+    position: relative;
+    transform-style: preserve-3d;
+  }
 
-    .neptune {
-      background-image:
-        radial-gradient(ellipse at 25% 45%, rgb(59 96 224) 10%, transparent 0),
-        linear-gradient(-5deg,
-          rgb(59 96 224) 10%,
-          rgb(97 138 249) 10%,
-          rgb(97 138 249) 30%,
-          rgb(59 96 224) 30%,
-          rgb(59 96 224) 45%,
-          rgb(97 138 249) 45%,
-          rgb(97 138 249) 70%,
-          rgb(59 96 224) 70%,
-          rgb(59 96 224) 80%,
-          rgb(97 138 249) 80%);
-    }
+  .uranus-ring {
+    position: absolute;
+    width: 170%;
+    top: -55%;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    background-image:
+      radial-gradient(circle at center,
+        transparent 40%,
+        rgb(64 115 106) 40%,
+        rgb(177 233 224) 43%,
+        rgb(177 233 224) 64%,
+        rgb(66 114 106) 98%);
+    transform: rotateX(100deg);
+    box-shadow: 0 10px 20px 20px rgb(0 0 0 / 20.7%);
+  }
 
-    .pluto {
-      background-image:
-        radial-gradient(circle at 8% 25%, rgb(253 220 161) 5%, transparent 5%),
-        radial-gradient(circle at 30% 70%, rgb(253 220 161) 10%, transparent 10%),
-        radial-gradient(circle at 60% 10%, rgb(253 220 161) 5%, transparent 5%),
-        radial-gradient(circle at 70% 70%, rgb(253 220 161) 3%, transparent 3%),
-        radial-gradient(circle at 80% 30%, rgb(253 220 161) 2%, transparent 2%),
-        radial-gradient(circle at 80% 51%, rgb(253 220 161) 4%, transparent 4%);
-    }
+  .neptune {
+    background-image:
+      radial-gradient(ellipse at 25% 45%, rgb(59 96 224) 10%, transparent 0),
+      linear-gradient(-5deg,
+        rgb(59 96 224) 10%,
+        rgb(97 138 249) 10%,
+        rgb(97 138 249) 30%,
+        rgb(59 96 224) 30%,
+        rgb(59 96 224) 45%,
+        rgb(97 138 249) 45%,
+        rgb(97 138 249) 70%,
+        rgb(59 96 224) 70%,
+        rgb(59 96 224) 80%,
+        rgb(97 138 249) 80%);
+  }
+
+  .pluto {
+    background-image:
+      radial-gradient(circle at 8% 25%, rgb(253 220 161) 5%, transparent 5%),
+      radial-gradient(circle at 30% 70%, rgb(253 220 161) 10%, transparent 10%),
+      radial-gradient(circle at 60% 10%, rgb(253 220 161) 5%, transparent 5%),
+      radial-gradient(circle at 70% 70%, rgb(253 220 161) 3%, transparent 3%),
+      radial-gradient(circle at 80% 30%, rgb(253 220 161) 2%, transparent 2%),
+      radial-gradient(circle at 80% 51%, rgb(253 220 161) 4%, transparent 4%);
+  }
 }

@@ -7,10 +7,12 @@ import Saturn from "./components/saturn";
 import Uranus from "./components/uranus";
 import Neptune from "./components/neptune";
 import Pluto from "./components/pluto";
+import Sun from "./components/sun";
 
 export default function Home() {
   return (
     <main>
+      <Sun />
       <Mercury />
       <Venus />
       <Earth />

@@ -1,7 +1,6 @@
 interface PlanetProps {
   planetName: string;
   visibleRings: boolean;
-  planetWidth: string;
   planetEyes: string;
   planetMouthWidth: string;
   planetMouthHeight: string;
@@ -10,7 +9,6 @@ interface PlanetProps {
 
 const Planet: React.FC<PlanetProps> = (props: PlanetProps) => {
   const planetStyle = {
-    width: props.planetWidth,
     animationDuration: props.animationDuration,
   };
   const eyesStyle = {
@@ -33,7 +31,7 @@ const Planet: React.FC<PlanetProps> = (props: PlanetProps) => {
       style={planetStyle}
     >
       {renderRing()}
-      <div className="flex flex-col items-center w-1/3 xs:pt-4 lg:pt-8">
+      <div className="flex flex-col items-center w-1/3 pt-2 md:pt-4 lg:pt-8">
         <div className="flex justify-between w-full">
           <div
             className="bg-gray-900 rounded-full aspect-square"
@@ -45,7 +43,7 @@ const Planet: React.FC<PlanetProps> = (props: PlanetProps) => {
           />
         </div>
         <div
-          className="mt-4 border-b-4 border-l-4 border-r-4 border-gray-900 rounded-b-full"
+          className="mt-1 border-b-2 border-l-2 border-r-2 border-gray-900 rounded-b-full lg:border-b-4 lg:border-l-4 lg:border-r-4 lg:mt-4"
           style={mouthStyle}
         />
       </div>

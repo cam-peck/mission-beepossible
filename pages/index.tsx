@@ -58,6 +58,7 @@ export default function Home() {
     let width = 100;
     let top = 0;
     let animation = 6;
+
     const orbitPlanets = planets.map((planets) => {
       width += 50;
       top -= 25;
@@ -81,10 +82,9 @@ export default function Home() {
           <Planet
             planetName={name}
             visibleRings={planets.visibleRings}
-            planetWidth={'20%'}
             planetEyes={'15%'}
-            planetMouthHeight={'7.5%'}
-            planetMouthWidth={'40%'}
+            planetMouthHeight={'10%'}
+            planetMouthWidth={'50%'}
             animationDuration={planetAnimation}
           />
         </div>

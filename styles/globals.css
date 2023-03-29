@@ -317,8 +317,8 @@
 
   .uranus-ring {
     position: absolute;
-    width: 170%;
-    top: -55%;
+    width: 145%;
+    top: -50%;
     aspect-ratio: 1 / 1;
     border-radius: 100%;
     background-image:
@@ -328,7 +328,7 @@
         rgb(177 233 224) 43%,
         rgb(177 233 224) 64%,
         rgb(66 114 106) 98%);
-    transform: rotateX(100deg);
+    transform: rotateX(110deg);
     box-shadow: 0 10px 20px 20px rgb(0 0 0 / 20.7%);
   }
 

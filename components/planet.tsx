@@ -19,13 +19,18 @@ const Planet: React.FC<PlanetProps> = (props: PlanetProps) => {
     height: props.planetMouthHeight,
   };
 
+  function renderRing() {
+    if (props.visibleRings) {
+      return <div className={`${props.planetName}-ring`} />;
+    }
+  }
+
   return (
     <div
-      className={`planet ${'bg-' + props.planetName} ${
-        props.planetName
-      } animate-[front_16s_linear_infinite]`}
+      className={`planet bg-${props.planetName} ${props.planetName} animate-[front_16s_linear_infinite]`}
       style={planetStyle}
     >
+      {renderRing()}
       <div className="flex flex-col items-center w-1/3 pt-8">
         <div className="flex justify-between w-full">
           <div

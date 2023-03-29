@@ -62,8 +62,8 @@ export default function Home() {
         <div className="stars animate-[twinkle_300s_linear_infinite]" />
         <div className="flex items-center justify-center h-screen bg-gray-700">
           <Planet
-            planetName={'earth'}
-            visibleRings={false}
+            planetName={'saturn'}
+            visibleRings={true}
             planetWidth={'20%'}
             planetEyes={'8px'}
             planetMouthHeight={'10px'}

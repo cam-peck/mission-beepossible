@@ -8,9 +8,9 @@ interface PlanetProps {
 
 const Pluto: React.FC<PlanetProps> = (props: PlanetProps) => {
   return (
-    <div className={`w-[${props.planetWidth}%] planet bg-pluto pluto ${props.solarSystem ? 'animate-[front_10s_linear_infinite]' : ''}`}>
+    <div className={`w-[${props.planetWidth}%] planet bg-pluto pluto ${props.solarSystem ? 'animate-[front_20s_linear_infinite]' : ''}`}>
       <div className="flex flex-col items-center w-1/3 pt-8">
-        <div className="w-full flex justify-between">
+        <div className="flex justify-between w-full">
           <div className={`w-[${props.planetEyes}px] aspect-square bg-gray-900 rounded-full`} />
           <div className={`w-[${props.planetEyes}px] aspect-square bg-gray-900 rounded-full`} />
         </div>

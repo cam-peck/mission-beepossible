@@ -14,7 +14,7 @@ const Mercury: React.FC<PlanetProps> = (props: PlanetProps) => {
           <div className={`w-[${props.planetEyes}px] aspect-square bg-gray-900 rounded-full`} />
           <div className={`w-[${props.planetEyes}px] aspect-square bg-gray-900 rounded-full`} />
         </div>
-      <div className={`w-[${props.planetMouthWidth}px] h-[${props.planetMouthHeight}px] rounded-b-full border-b-4 border-l-4 border-gray-900 border-r-4 mt-4`} />
+      <div className={`w-[${props.planetMouthWidth}px] h-[${props.planetMouthHeight}px] rounded-b-full border-b-4 border-l-4 border-gray-900 border-r-4 mt-2`} />
       </div>
     </div>
   )

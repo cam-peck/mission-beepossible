@@ -5,11 +5,13 @@ interface PlanetProps {
   planetEyes: string;
   planetMouthWidth: string;
   planetMouthHeight: string;
+  animationDuration: string;
 }
 
 const Planet: React.FC<PlanetProps> = (props: PlanetProps) => {
   const planetStyle = {
     width: props.planetWidth,
+    animationDuration: props.animationDuration,
   };
   const eyesStyle = {
     width: props.planetEyes,
@@ -27,7 +29,7 @@ const Planet: React.FC<PlanetProps> = (props: PlanetProps) => {
 
   return (
     <div
-      className={`planet bg-${props.planetName} ${props.planetName} animate-[front_16s_linear_infinite]`}
+      className={`planet bg-${props.planetName} ${props.planetName} animate-[front_linear_infinite]`}
       style={planetStyle}
     >
       {renderRing()}

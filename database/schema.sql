@@ -8,6 +8,7 @@ CREATE TABLE "public"."planets" (
 	"diameter" int NOT NULL,
 	"distance" decimal NOT NULL,
 	"planetType" planetType NOT NULL,
+	"visibleRings" boolean NOT NULL,
 	"yearDiscovered" int NOT NULL,
 	"temperature" int NOT NULL,
 	"funFact1" text NOT NULL,
@@ -17,8 +18,6 @@ CREATE TABLE "public"."planets" (
 ) WITH (
   OIDS=FALSE
 );
-
-
 
 CREATE TABLE "public"."moons" (
 	"moonId" serial NOT NULL,

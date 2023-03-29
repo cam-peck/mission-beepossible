@@ -21,6 +21,7 @@ module.exports = {
         keyframes: {
           circle: {
             '0%': { transform: 'rotateX(80deg) rotateZ(0)' },
+            '50%': { transform: 'rotateX(100deg) rotateZ(180deg)' },
             '100%': { transform: 'rotateX(80deg) rotateZ(360deg)' }
           },
           front: {

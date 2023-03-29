@@ -35,6 +35,7 @@ export default function Planets() {
   const router = useRouter();
   const { planetName } = router.query;
   const [data, setData] = useState<testData>();
+  const [core, setCore] = useState<boolean>(false);
 
   useEffect(() => {
     setData(testData);
@@ -43,12 +44,18 @@ export default function Planets() {
   if (!data) {
     return <h1>LOADING. . .</h1>;
   } else {
+    const display = core ? 'opacity-100' : 'opacity-0';
+
     return (
       <>
         <div className="stars animate-[twinkle_300s_linear_infinite]" />
         <div className="h-screen bg-gray-700">
-          <p>Post: {planetName}</p>
-          <div className={`basis-1/5 planet bg-${planetName} ${planetName}`}>
+          <p className="p-4 text-2xl font-bold text-center text-white lg:pb-6">
+            Welcome to {planetName}!
+          </p>
+          <div
+            className={`m-auto lg:ml-4 w-2/4 lg:w-1/5 planet bg-${planetName} ${planetName}`}
+          >
             <div className={`${planetName}-ring`} />
             <div className="flex flex-col items-center w-1/3 pt-8">
               <div className="flex justify-between w-full">
@@ -62,6 +69,15 @@ export default function Planets() {
               <div
                 className={`w-[20px] h-[10px] rounded-b-full border-b-4 border-l-4 border-gray-900 border-r-4 mt-4`}
               />
+              <div
+                onMouseEnter={() => setCore(true)}
+                onMouseLeave={() => setCore(false)}
+                className={`duration-500 absolute w-1/2 flex items-center transition-opacity bg-orange-300 rounded-full bottom-16 aspect-square ${display}`}
+              >
+                <p className="w-full text-center">
+                  I have a {data.planetType} core!
+                </p>
+              </div>
             </div>
           </div>
           <FactContainer

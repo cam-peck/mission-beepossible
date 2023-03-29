@@ -33,17 +33,17 @@ const FactContainer = (props: funFacts) => {
     const factsList = factsArray.map((funFacts: fact) => {
       const display = fact === funFacts.factNum ? '' : 'hidden';
       return (
-        <div className="" key={funFacts.factNum}>
+        <div className="w-4/5 lg:w-[25%] pl-4 " key={funFacts.factNum}>
           <button
             type="button"
-            className="header"
+            className="text-2xl font-bold text-white"
             onClick={() => {
               setFact(funFacts.factNum);
             }}
           >
             Fun Fact
           </button>
-          <p className={`${display}`}>{funFacts.funFact}</p>
+          <p className={`${display} text-white`}>{funFacts.funFact}</p>
         </div>
       );
     });

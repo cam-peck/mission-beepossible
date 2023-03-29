@@ -1,10 +1,14 @@
-import Test from '../components/test';
+
+// import { useState } from "react";
+import SolarSystem from "./solarsystem";
 
 export default function Home() {
+
+  // const [page, setPage] = useState<string>('home')
+
   return (
     <main>
-      <h1 className="text-[100px]">Hello Next.js! Testing changes!</h1>
-      <Test />
+      <SolarSystem />
     </main>
   );
 }

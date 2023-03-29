@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  .hidden {
+    display: none;
+  }
+
   .planet {
     aspect-ratio: 1 / 1;
     border-radius: 100%;

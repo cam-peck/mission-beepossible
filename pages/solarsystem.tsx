@@ -11,7 +11,7 @@ import Pluto from "./components/pluto"
 export default function SolarSystem() {
   return (
     <>
-      <div className="stars animate-[twinkle_15s_alternate_infinite]" />
+      <div className="stars animate-[twinkle_300s_linear_infinite]" />
       <div className="flex items-center justify-center h-screen bg-gray-700">
         <div className="w-[15%] planet bg-sun shadow-sun absolute preserve">
           <div className="flex flex-col items-center w-1/3 pt-16">

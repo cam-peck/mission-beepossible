@@ -42,7 +42,8 @@ module.exports = {
           },
           twinkle: {
             '0%': { transform: 'scale(1)' },
-            '100%': { transform: 'scale(1.5)' }
+            '50%': { transform: 'scale(1.5) rotateZ(180deg)'},
+            '100%': { transform: 'scale(1) rotateZ(360deg)' }
           }
         }
       },

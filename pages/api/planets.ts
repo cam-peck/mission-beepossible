@@ -3,14 +3,15 @@ import db from '@/lib/db';
 
 type Planet = {
   planetName: string;
-  size: number;
+  diameter: number;
   yearDiscovered: number;
   distance: number;
-  coreType: string;
+  planetType: string;
   temperature: number;
   funFact1: string;
   funFact2: string;
   funFact3: string;
+  visibleRings: boolean;
 };
 
 export default async function handler(
@@ -20,9 +21,11 @@ export default async function handler(
   const sql = `
   SELECT *
   FROM "planets"
+  LEFT JOIN "moons" USING ("planetName");
   `;
   try {
     const result = await db?.query(sql);
+    console.log('result: ', result);
     if (result) {
       const planets = result.rows;
       res.status(200).json(planets);

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SolarSystem from './solarsystem';
 
 type planets = {
@@ -47,11 +47,19 @@ const planetsList: planets[] = [
 
 export default function Home() {
   // const [page, setPage] = useState<string>('home')
-  const [planets] = useState<planets[]>(planetsList);
+  const [planets, setPlanets] = useState<planets[]>();
+
+  useEffect(() => {
+    setPlanets(planetsList)
+  }, [])
   // replace SolarSystem component load with the solar-system code for the home page
-  return (
-    <main>
-      <SolarSystem />
-    </main>
-  );
+  if (!planets) {
+    return <h1>LOADING. . .</h1>
+  } else {
+    return (
+      <main>
+        <SolarSystem />
+      </main>
+    );
+  }
 }

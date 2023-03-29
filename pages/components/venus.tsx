@@ -9,7 +9,7 @@ interface PlanetProps {
 const Venus: React.FC<PlanetProps> = (props: PlanetProps) => {
   return (
     <div className={`w-[${props.planetWidth}%] planet bg-venus venus ${props.solarSystem ? 'animate-[front_14s_linear_infinite]' : ''}`}>
-      <div className="flex flex-col items-center w-1/3 pt-8">
+      <div className="flex flex-col items-center w-1/3 pt-4">
         <div className="flex justify-between w-full">
           <div className={`w-[${props.planetEyes}px] aspect-square bg-gray-900 rounded-full`} />
           <div className={`w-[${props.planetEyes}px] aspect-square bg-gray-900 rounded-full`} />

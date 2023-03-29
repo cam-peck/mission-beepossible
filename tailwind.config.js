@@ -39,6 +39,10 @@ module.exports = {
             '88%': { transform: 'rotateX(-80deg) rotateY(330deg)' },
             '96%': { transform: 'rotateX(-80deg) rotateY(360deg)' },
             '100%': { transform: 'rotateX(-80deg) rotateY(360deg)' }
+          },
+          twinkle: {
+            '0%': { transform: 'scale(1)' },
+            '100%': { transform: 'scale(1.5)' }
           }
         }
       },

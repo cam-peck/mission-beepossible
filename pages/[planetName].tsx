@@ -54,7 +54,7 @@ export default function Planets() {
             Welcome to {planetName}!
           </p>
           <div
-            className={`m-auto lg:ml-4 w-2/4 lg:w-1/5 planet bg-${planetName} ${planetName}`}
+            className={`animate-[idle_10s_ease_infinite] m-auto lg:ml-6 w-2/4 lg:w-1/5 planet bg-${planetName} ${planetName}`}
           >
             <div className={`${planetName}-ring`} />
             <div className="flex flex-col items-center w-1/3 pt-8">
@@ -72,7 +72,7 @@ export default function Planets() {
               <div
                 onMouseEnter={() => setCore(true)}
                 onMouseLeave={() => setCore(false)}
-                className={`duration-500 absolute w-1/2 flex items-center transition-opacity bg-orange-300 rounded-full bottom-16 aspect-square ${display}`}
+                className={`duration-500 absolute w-1/2 flex items-center transition-opacity bg-orange-300 rounded-full bottom-4 lg:bottom-16 aspect-square ${display}`}
               >
                 <p className="w-full text-center">
                   I have a {data.planetType} core!

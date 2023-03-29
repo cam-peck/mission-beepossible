@@ -14,7 +14,15 @@
 	"forwardPorts": [3000, 5432],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm i && npm run db:import"
+	"postCreateCommand": "npm i && npm run db:import",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"AdamCaviness.theme-monokai-dark-soda"
+			]
+		}
+	}
 
 	// Configure tool-specific properties.
 	// "customizations": {},

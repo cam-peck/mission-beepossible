@@ -14,7 +14,7 @@
 	"forwardPorts": [3000, 5432],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm i"
+	"postCreateCommand": "npm i && npm run db:import"
 
 	// Configure tool-specific properties.
 	// "customizations": {},

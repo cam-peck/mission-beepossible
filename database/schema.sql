@@ -2,12 +2,12 @@ DROP SCHEMA "public" cascade;
 create schema "public";
 
 CREATE TYPE planet AS ENUM ('Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto');
-CREATE TYPE core AS ENUM ('solid', 'gas');
+CREATE TYPE planetType AS ENUM ('solid', 'gas');
 CREATE TABLE "public"."planets" (
 	"planetName" planet NOT NULL,
-	"size" decimal NOT NULL,
+	"diameter" int NOT NULL,
 	"distance" decimal NOT NULL,
-	"coreType" core NOT NULL,
+	"planetType" planetType NOT NULL,
 	"yearDiscovered" int NOT NULL,
 	"temperature" int NOT NULL,
 	"funFact1" text NOT NULL,

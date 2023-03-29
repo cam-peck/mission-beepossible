@@ -54,6 +54,45 @@ export default function Home() {
     setPlanets(planetsList);
   }, []);
   // replace SolarSystem component load with the solar-system code for the home page
+  const renderPlanets = (planets: planets[]) => {
+    let width = 100;
+    let top = 0;
+    let animation = 6;
+    const orbitPlanets = planets.map((planets) => {
+      width += 50;
+      top -= 25;
+      animation += 4;
+
+      const style = {
+        width: width + '%',
+        top: top + '%',
+        animationDuration: animation + 's',
+      };
+
+      const planetAnimation = animation + 's';
+      const name = planets.planetName.toLowerCase();
+
+      return (
+        <div
+          className="aspect-square margin-auto rounded-full border-4 border-dotted border-gray-100 absolute animate-[circle_linear_infinite] preserve"
+          style={style}
+          key={planets.planetName}
+        >
+          <Planet
+            planetName={name}
+            visibleRings={planets.visibleRings}
+            planetWidth={'20%'}
+            planetEyes={'15%'}
+            planetMouthHeight={'7.5%'}
+            planetMouthWidth={'40%'}
+            animationDuration={planetAnimation}
+          />
+        </div>
+      );
+    });
+    return orbitPlanets;
+  };
+
   if (!planets) {
     return <h1>LOADING. . .</h1>;
   } else {
@@ -69,20 +108,9 @@ export default function Home() {
               </div>
               <div className="w-[20px] lg:w-[40px] h-[10px] lg:h-[20px] rounded-b-full border-b-2 border-l-2 border-r-2 lg:border-b-4 lg:border-l-4 border-gray-900 lg:border-r-4 mt-2 lg:mt-4" />
             </div>
-            <div className="w-[400%] top-[-145%] aspect-square margin-auto rounded-full border-4 border-dotted border-gray-100 absolute animate-[circle_26s_linear_infinite] preserve">
-              <Planet
-                planetName={'saturn'}
-                visibleRings={true}
-                planetWidth={'20%'}
-                planetEyes={'15%'}
-                planetMouthHeight={'7.5%'}
-                planetMouthWidth={'40%'}
-                animationDuration={'26s'}
-              />
-            </div>
+            {renderPlanets(planets)}
           </div>
         </div>
-        {/* <SolarSystem /> */}
       </main>
     );
   }

@@ -33,7 +33,7 @@ const Planet: React.FC<PlanetProps> = (props: PlanetProps) => {
       style={planetStyle}
     >
       {renderRing()}
-      <div className="flex flex-col items-center w-1/3 pt-8">
+      <div className="flex flex-col items-center w-1/3 xs:pt-4 lg:pt-8">
         <div className="flex justify-between w-full">
           <div
             className="bg-gray-900 rounded-full aspect-square"

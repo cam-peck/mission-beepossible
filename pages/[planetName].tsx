@@ -54,51 +54,61 @@ export default function Planets() {
             Welcome to {planetName}!
           </p>
           <div className="flex flex-wrap">
-            <div
-              className={`animate-[idle_10s_ease_infinite] m-auto lg:m-0 lg:ml-6 basis-2/4 lg:basis-1/5 planet bg-${planetName} ${planetName}`}
-            >
-              <div className={`${planetName}-ring`} />
-              <div className="flex flex-col items-center w-1/3 pt-8">
-                <div className="flex justify-between w-full">
+            <div className="m-auto basis-2/4 lg:basis-1/3 ">
+              <div
+                className={`animate-[idle_10s_ease_infinite] m-auto w-full md:w-1/2 planet bg-${planetName} ${planetName}`}
+              >
+                <div className={`${planetName}-ring`} />
+                <div className="flex flex-col items-center w-1/4 pt-8">
+                  <div className="flex justify-between w-full">
+                    <div
+                      className={`w-[10px] aspect-square bg-gray-900 rounded-full`}
+                    />
+                    <div
+                      className={`w-[10px] aspect-square bg-gray-900 rounded-full`}
+                    />
+                  </div>
                   <div
-                    className={`w-[10px] aspect-square bg-gray-900 rounded-full`}
+                    className={`w-[20px] h-[10px] rounded-b-full border-b-4 border-l-4 border-gray-900 border-r-4 mt-4`}
                   />
                   <div
-                    className={`w-[10px] aspect-square bg-gray-900 rounded-full`}
-                  />
-                </div>
-                <div
-                  className={`w-[20px] h-[10px] rounded-b-full border-b-4 border-l-4 border-gray-900 border-r-4 mt-4`}
-                />
-                <div
-                  onMouseEnter={() => setCore(true)}
-                  onMouseLeave={() => setCore(false)}
-                  className={`duration-500 absolute w-1/2 flex items-center transition-opacity bg-orange-300 rounded-full bottom-4 lg:bottom-16 aspect-square ${display}`}
-                >
-                  <p className="w-full text-center">
-                    I have a {data.planetType} core!
-                  </p>
+                    onMouseEnter={() => setCore(true)}
+                    onMouseLeave={() => setCore(false)}
+                    className={`duration-500 absolute w-1/2 flex items-center transition-opacity ${data.planetType} rounded-full bottom-4 lg:bottom-8 aspect-square ${display}`}
+                  >
+                    <p className="w-full text-center">
+                      I have a{' '}
+                      <span className="font-semibold">{data.planetType}</span>{' '}
+                      core!
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="text-white lg:pl-8 basis-full lg:basis-1/3">
-              <p className="text-xl">Hi there, I&apos;m {planetName}!</p>
-              <p className="text-lg">
-                I was first discovered in {data.yearDiscovered}! I was found to
-                be {data.distance} million km away from the sun and I have a
-                diameter of {data.diameter} km!
+            <div className="p-4 text-white lg:pl-8 basis-full lg:basis-1/3">
+              <p className="text-xl">
+                Hi there, I&apos;m{' '}
+                <span className="font-bold">{planetName}</span>!
               </p>
               <p className="text-lg">
+                I was first discovered in{' '}
+                <span className="font-semibold">{data.yearDiscovered}</span>! I
+                was found to be{' '}
+                <span className="font-semibold">{data.distance}</span> million
+                km away from the sun and I have a diameter of{' '}
+                <span className="font-semibold">{data.diameter}</span> km!
+              </p>
+              <p className="pl-4 text-sm">
                 Mouse over me to see what kind of core I have!
               </p>
-              <p>*Click on mobile!</p>
+              <p className="pl-4 text-sm">*Click on mobile!</p>
             </div>
+            <FactContainer
+              funFact1={data.funFact1}
+              funFact2={data.funFact2}
+              funFact3={data.funFact3}
+            />
           </div>
-          <FactContainer
-            funFact1={data.funFact1}
-            funFact2={data.funFact2}
-            funFact3={data.funFact3}
-          />
         </div>
       </>
     );

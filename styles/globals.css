@@ -7,6 +7,15 @@
     display: none;
   }
 
+  .solid {
+    background-color: rgb(225 175 100);
+  }
+
+  .gas {
+    background-color: green;
+    box-shadow: 0 0 20px 5px green;
+  }
+
   .planet {
     aspect-ratio: 1 / 1;
     border-radius: 100%;
@@ -14,6 +23,22 @@
     justify-content: center;
     transform-style: preserve-3d;
     box-shadow: inset 10px -10px 20px 20px rgb(0 0 0 / 20.7%);
+  }
+
+  .moon {
+    background-color: rgb(176 176 176);
+    background-image: radial-gradient(
+        circle at 8% 25%,
+        rgb(126 87 60) 5%,
+        transparent 5%
+      ),
+      radial-gradient(circle at 30% 70%, rgb(126 87 60) 6%, transparent 6%),
+      radial-gradient(circle at 60% 10%, rgb(126 87 60) 5%, transparent 5%),
+      radial-gradient(circle at 70% 70%, rgb(126 87 60) 3%, transparent 3%),
+      radial-gradient(circle at 80% 30%, rgb(126 87 60) 2%, transparent 2%),
+      radial-gradient(circle at 40% 75%, rgb(126 87 60) 3%, transparent 3%),
+      radial-gradient(circle at 50% 40%, rgb(126 87 60) 2%, transparent 2%),
+      radial-gradient(circle at 80% 51%, rgb(126 87 60) 4%, transparent 4%);
   }
 
   .stars {

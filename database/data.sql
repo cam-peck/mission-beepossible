@@ -1,3 +1,8 @@
+-- Planet Data --
+-- diameter: kilometers
+-- distance: million kilometers (10^6)
+-- temperature: Celsius
+
 insert into "planets" ("planetName", "diameter", "yearDiscovered", "distance", "planetType",  "temperature", "funFact1", "funFact2", "funFact3", "visibleRings")
 values ('Mercury', 4879, 1610, 57.9, 'solid',  167, 'Mercury is the fastest planet in the solar system. It travels at nearly 47 km / second. Zooooooom!', 'No life likely here -- the solar radiation and heat are pretty unfriendly...', 'We have a current mission out for mercury -- the BepiColombo!', false);
 
@@ -25,3 +30,172 @@ values ('Neptune', 49528, 1846, 4515.0, 'gas',  -200, 'Gravity on neptune is onl
 insert into "planets" ("planetName", "diameter", "yearDiscovered", "distance", "planetType",  "temperature", "funFact1", "funFact2", "funFact3", "visibleRings")
 values ('Pluto', 2376, 1930, 5906.4, 'solid', -225, 'Some people classify pluto as a dwarf planet. Some people also think the Earth is flat.', 'One year on pluto is 248 Earth years. Yikes.', 'Disney''s Pluto the dog was named after the planet!', false);
 
+-- Moon Data --
+-- Diameter: kilometers
+
+-- Earth --
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Earth', 'The Moon', 'Until Galileo found moons orbiting Jupiter in 1610, we thought Earth''s moon was the only moon!', 1609, 3475);
+
+-- Mars --
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Mars', 'Phobos', 'Like Deimos, Phobos was named after the mythological son of Ares -- the greek counterpart to the Roman god, Mars. Phobos means "fear".', 1877, 23);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Mars', 'Deimos', 'Like Phobos, Deimos was named after a mythological sun of Ares -- the greek countpart to the Roman god, Mars. Deomos means "dread".', 1877, 12);
+
+-- Jupiter (unfinished) -- https://en.wikipedia.org/wiki/Moons_of_Jupiter
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Metis', 'Named after the mythological Metis, who was Zeus''s first wife.', 1979, 43);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Adrastea', '', 1979, 16);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Amalthea', '', 1892, 167);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Thebe', '', 1892, 99);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Io', '', 1610, 3643);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Europa', '', 1610, 3122);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Ganymede', '', 1610, 5268);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Callisto', '', 1610, 4821);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Themisto', '', 1975, 9);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Leda', '', 1974, 22);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Ersa', '', 2018, 3);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'S/2018 J 2', '', 2018, 3);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Himalia', '', 1904, 140);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Pandia', '', 2017, 3);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Lysithea', '', 1938, 42);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Elara', '', 1905, 80);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'S/2011 J 3', '', 2011, 3);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Dia', '', 2000, 4);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'S/2018 J 4', '', 2018, 2);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Carpo', '', 2003, 3);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Valetudo', '', 2016, 1);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Euporie', '', 2001, 2);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'S/2003 J 18', '', 2003, 2);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Eupheme', '', 2, 2003);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'S/2021 J 3', '', 2021, 2);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'S/2010 J 2', '', 2010, 1);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'S/2016 J 1', '', 2016, 1);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Mneme', '', 2003, 2);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Euanthe', '', 2001, 3);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'S/2003 J 16', '', 2003, 2);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Harpalyke', '', 2000, 4);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Jupiter', 'Orthosie', '', 2001, 2);
+
+-- Saturn -- (unfinished) https://en.wikipedia.org/wiki/Moons_of_Saturn
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Saturn', 'S/2009 S 1', '', 2009, 1);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Saturn', '(moonlets)', '', 2006, 1);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Saturn', 'Pan', '', 1990, 28);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Saturn', 'Daphnis', '', 2005, 8);
+
+-- Uranus -- (unfinished) https://en.wikipedia.org/wiki/Moons_of_Uranus
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Uranus', 'Cordelia', '', 1986, 43);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Uranus', 'Ophelia', '', 1986, 48);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Uranus', 'Bianca', '', 1986, 53);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Uranus', 'Cressida', '', 1986, 82);
+
+-- Neptune -- (unfinished) https://en.wikipedia.org/wiki/Moons_of_Saturn
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Neptune', 'Naiad', '', 1989, 60);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Neptune', 'Thalassa', '', 1989, 81);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Neptune', 'Depsina', '', 1989, 156);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Neptune', 'Galatea', '', 1989, 175);
+
+-- Pluto --
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Pluto', 'Charon', 'Charon, ferryman of the underworld.', 2009, 1);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Pluto', 'Styx', 'The mythical river Styx.', 2006, 1);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Pluto', 'Nix', 'Nyx, goddess of the night.', 1990, 28);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Pluto', 'Kerberos', 'Cerberus, guard of the underworld.', 2005, 8);
+
+insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
+values ('Pluto', 'Hydra', 'Hydra, guard of the underworld.', 2005, 8);

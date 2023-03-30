@@ -25,7 +25,7 @@ CREATE TABLE "public"."moons" (
 	"moonName" TEXT NOT NULL,
 	"nameHistory" TEXT NOT NULL,
 	"yearDiscovered" int NOT NULL,
-	"size" int NOT NULL
+	"diameter" int NOT NULL
 ) WITH (
   OIDS=FALSE
 );

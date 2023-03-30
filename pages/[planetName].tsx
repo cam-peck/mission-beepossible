@@ -92,7 +92,7 @@ export default function Planets() {
     return <h1>LOADING. . .</h1>;
   } else {
     const display = core ? 'opacity-100' : 'opacity-0';
-
+    const ring = core ? 'opacity-25' : 'opacity-100';
     return (
       <>
         <div className="stars animate-[twinkle_300s_linear_infinite]" />
@@ -105,7 +105,7 @@ export default function Planets() {
               <div
                 className={`animate-[idle_10s_ease_infinite] m-auto w-full md:w-1/2 planet bg-${planetName} ${planetName}`}
               >
-                <div className={`${planetName}-ring`} />
+                <div className={`${planetName}-ring ${ring}`} />
                 <div className="flex flex-col items-center w-1/4 pt-8">
                   <div className="flex justify-between w-full">
                     <div

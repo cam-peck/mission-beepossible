@@ -1,6 +1,7 @@
 interface PlanetProps {
   planetName: string;
   visibleRings: boolean;
+  planetWidth: string;
   planetEyes: string;
   planetMouthWidth: string;
   planetMouthHeight: string;
@@ -27,7 +28,7 @@ const Planet: React.FC<PlanetProps> = (props: PlanetProps) => {
 
   return (
     <div
-      className={`planet bg-${props.planetName} ${props.planetName} animate-[front_linear_infinite]`}
+      className={`${props.planetWidth} planet bg-${props.planetName} ${props.planetName} animate-[front_linear_infinite]`}
       style={planetStyle}
     >
       {renderRing()}

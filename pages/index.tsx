@@ -100,7 +100,7 @@ export default function Home() {
       <main>
         <div className="stars animate-[twinkle_300s_linear_infinite]" />
         <div className="flex items-center justify-center h-screen bg-gray-700">
-          <div className="w-[15%] aspect-square planet bg-sun shadow-sun absolute preserve">
+          <div className="w-[15%] aspect-square planet sun absolute preserve">
             <div className="flex flex-col items-center w-1/2 pt-4 md:pt-8 lg:pt-16 lg:w-1/3">
               <div className="flex justify-between w-full">
                 <div className="w-[5px] lg:w-[10px] aspect-square bg-gray-900 rounded-full" />

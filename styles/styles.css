@@ -97,6 +97,7 @@
 
 .mercury {
   width: 20%;
+  background-color: rgb(176 176 176);
   background-image: radial-gradient(
       circle at 8% 25%,
       rgb(147 147 147) 10%,
@@ -109,6 +110,7 @@
 
 .venus {
   width: 20%;
+  background-color: rgb(179 121 82);
   background-image: radial-gradient(
       circle at 8% 25%,
       rgb(126 87 60) 5%,
@@ -123,6 +125,7 @@
 
 .earth {
   width: 20%;
+  background-color: '96 168 240';
   background-image: radial-gradient(
       ellipse at 12% 15%,
       rgb(61 191 52) 15%,
@@ -140,6 +143,7 @@
 
 .mars {
   width: 12%;
+  background-color: rgb(211 88 88);
   background-image: radial-gradient(
       circle at 20% 5%,
       rgb(119 34 34) 15%,
@@ -278,6 +282,7 @@
 
 .pluto {
   width: 5%;
+  background-color: rgb(230 158 93);
   background-image: radial-gradient(
       circle at 8% 25%,
       rgb(253 220 161) 5%,
@@ -288,6 +293,11 @@
     radial-gradient(circle at 70% 70%, rgb(253 220 161) 3%, transparent 3%),
     radial-gradient(circle at 80% 30%, rgb(253 220 161) 2%, transparent 2%),
     radial-gradient(circle at 80% 51%, rgb(253 220 161) 4%, transparent 4%);
+}
+
+.sun {
+  background-color: rgb(233 208 67);
+  box-shadow: 0 0 50px 10px rgb(241 241 152);
 }
 
 .moon {

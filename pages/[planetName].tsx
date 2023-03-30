@@ -16,7 +16,14 @@ type testData = {
   visibleRings: boolean;
 };
 
-const testData = {
+type moonTestData = {
+  moonName: string;
+  nameHistory: string;
+  yearDiscovered: number;
+  diameter: number;
+};
+
+const testData: testData = {
   planetName: 'Mercury',
   diameter: 4879,
   yearDiscovered: 1610,
@@ -30,6 +37,33 @@ const testData = {
   funFact3: 'We have a current mission out for Mercury -- the BepiColombo!',
   visibleRings: false,
 };
+
+const moonTestData: moonTestData[] = [
+  {
+    moonName: 'MoonOne',
+    nameHistory: 'I named it',
+    yearDiscovered: 6969,
+    diameter: 4200,
+  },
+  {
+    moonName: 'MoonOne',
+    nameHistory: 'I named it',
+    yearDiscovered: 6969,
+    diameter: 4200,
+  },
+  {
+    moonName: 'MoonOne',
+    nameHistory: 'I named it',
+    yearDiscovered: 6969,
+    diameter: 4200,
+  },
+  {
+    moonName: 'MoonOne',
+    nameHistory: 'I named it',
+    yearDiscovered: 6969,
+    diameter: 4200,
+  },
+];
 
 export default function Planets() {
   const router = useRouter();

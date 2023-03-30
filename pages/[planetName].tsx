@@ -29,7 +29,7 @@ const testData: testData = {
   diameter: 4879,
   yearDiscovered: 1610,
   distance: 57.9,
-  planetType: 'solid',
+  planetType: 'gas',
   temperature: 167,
   funFact1:
     'Mercury is the fastest planet in the solar system. It travels at nearly 47 km / second. Zooooooom!',

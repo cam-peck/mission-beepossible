@@ -26,7 +26,7 @@ const Moons = (props: moonData) => {
               <div className="w-[20px] h-[10px] rounded-b-full border-b-2 border-l-2 border-gray-900 border-r-2 mt-2" />
             </div>
           </div>
-          <div className="pl-4">
+          <div className="pl-4 text-white">
             <h1>{moon.moonName}</h1>
             <p>{moon.nameHistory}</p>
             <p>{moon.yearDiscovered}</p>

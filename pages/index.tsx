@@ -122,6 +122,58 @@ export default function Home() {
             {renderPlanets(planets)}
           </div>
         </div>
+        <h1 className="text-white text-4xl md:text-5xl lg:text-6xl w-full text-center absolute top-4">
+          Welcome to the Solar System!
+        </h1>
+        <nav className="w-full h-12 absolute bottom-4 md:bottom-12 flex justify-center">
+          <ul className="w-4/5 h-full md:h-4/5 flex flex-wrap justify-around text-white">
+            <li>
+              <a className="basis-1/4 md:basis-1/12" href="/mercury">
+                Mercury
+              </a>
+            </li>
+            <li>
+              <a className="basis-1/4 md:basis-1/12" href="/venus">
+                Venus
+              </a>
+            </li>
+            <li>
+              <a className="basis-1/4 md:basis-1/12" href="/earth">
+                Earth
+              </a>
+            </li>
+            <li>
+              <a className="basis-1/4 md:basis-1/12" href="/mars">
+                Mars
+              </a>
+            </li>
+            <li>
+              <a className="basis-1/4 md:basis-1/12" href="/jupiter">
+                Jupiter
+              </a>
+            </li>
+            <li>
+              <a className="basis-1/4 md:basis-1/12" href="/saturn">
+                Saturn
+              </a>
+            </li>
+            <li>
+              <a className="basis-1/4 md:basis-1/12" href="/uranus">
+                Uranus
+              </a>
+            </li>
+            <li>
+              <a className="basis-1/4 md:basis-1/12" href="/neptune">
+                Neptune
+              </a>
+            </li>
+            <li>
+              <a className="basis-1/4 md:basis-1/12" href="/pluto">
+                Pluto
+              </a>
+            </li>
+          </ul>
+        </nav>
       </main>
     );
   }

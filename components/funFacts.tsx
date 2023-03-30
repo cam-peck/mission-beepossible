@@ -33,16 +33,18 @@ const FactContainer = (props: funFacts) => {
     const factsList = factsArray.map((funFacts: fact) => {
       const display = fact === funFacts.factNum ? '' : 'hidden';
       return (
-        <div className="w-4/5 pl-4 " key={funFacts.factNum}>
+        <div className="w-full lg:pl-4 lg:w-4/5" key={funFacts.factNum}>
           <div
-            className="text-2xl font-bold text-white cursor-pointer"
+            className="pl-4 text-2xl font-bold text-white bg-gray-400 rounded-t cursor-pointer bg-opacity-20"
             onClick={() => {
               setFact(funFacts.factNum);
             }}
           >
             Fun Fact #{funFacts.factNum}
           </div>
-          <p className={`${display} text-white`}>{funFacts.funFact}</p>
+          <p className={`${display} pl-4 text-white bg-white bg-opacity-20`}>
+            {funFacts.funFact}
+          </p>
         </div>
       );
     });
@@ -50,7 +52,7 @@ const FactContainer = (props: funFacts) => {
   };
 
   return (
-    <div className="flex flex-col w-full lg:w-1/3">
+    <div className="flex flex-col w-full pt-4 lg:pt-0 lg:w-1/3">
       {renderFacts(factsArray)}
     </div>
   );

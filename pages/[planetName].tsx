@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import FactContainer from '../components/funFacts';
+import Moons from '../components/renderMoons';
 
 // all planet code for base planet component goes in here
 type testData = {
@@ -46,19 +47,31 @@ const moonTestData: moonTestData[] = [
     diameter: 4200,
   },
   {
-    moonName: 'MoonOne',
+    moonName: 'MoonTwo',
     nameHistory: 'I named it',
     yearDiscovered: 6969,
     diameter: 4200,
   },
   {
-    moonName: 'MoonOne',
+    moonName: 'MoonThree',
     nameHistory: 'I named it',
     yearDiscovered: 6969,
     diameter: 4200,
   },
   {
-    moonName: 'MoonOne',
+    moonName: 'MoonFour',
+    nameHistory: 'I named it',
+    yearDiscovered: 6969,
+    diameter: 4200,
+  },
+  {
+    moonName: 'MoonFive',
+    nameHistory: 'I named it',
+    yearDiscovered: 6969,
+    diameter: 4200,
+  },
+  {
+    moonName: 'MoonSix',
     nameHistory: 'I named it',
     yearDiscovered: 6969,
     diameter: 4200,
@@ -83,11 +96,11 @@ export default function Planets() {
     return (
       <>
         <div className="stars animate-[twinkle_300s_linear_infinite]" />
-        <div className="h-screen bg-gray-700">
+        <div className="h-full bg-gray-700 lg:h-screen">
           <p className="p-4 text-2xl font-bold text-center text-white lg:pb-6">
             Welcome to {planetName}!
           </p>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap pb-8">
             <div className="m-auto basis-2/4 lg:basis-1/3 ">
               <div
                 className={`animate-[idle_10s_ease_infinite] m-auto w-full md:w-1/2 planet bg-${planetName} ${planetName}`}
@@ -119,7 +132,7 @@ export default function Planets() {
                 </div>
               </div>
             </div>
-            <div className="p-4 text-white lg:pl-8 basis-full lg:basis-1/3">
+            <div className="p-4 mt-4 text-white bg-white rounded lg:mt-0 bg-opacity-10 lg:pl-8 basis-full lg:basis-1/3">
               <p className="text-xl">
                 Hi there, I&apos;m{' '}
                 <span className="font-bold">{planetName}</span>!
@@ -143,6 +156,7 @@ export default function Planets() {
               funFact3={data.funFact3}
             />
           </div>
+          <Moons moonData={moonTestData} />
         </div>
       </>
     );

@@ -1,14 +1,8 @@
 import { useState, useEffect } from 'react';
 import Planet from '../components/planet';
-// import SolarSystem from './solarsystem';
+import { solarSystemPlanet } from '@/lib/types';
 
-type planets = {
-  planetName: string;
-  visibleRings: boolean;
-  planetWidth: string;
-};
-
-const planetsList: planets[] = [
+const planetsList: solarSystemPlanet[] = [
   {
     planetName: 'Mercury',
     visibleRings: false,
@@ -58,13 +52,13 @@ const planetsList: planets[] = [
 
 export default function Home() {
   // const [page, setPage] = useState<string>('home')
-  const [planets, setPlanets] = useState<planets[]>();
+  const [planets, setPlanets] = useState<solarSystemPlanet[]>();
 
   useEffect(() => {
     setPlanets(planetsList);
   }, []);
   // replace SolarSystem component load with the solar-system code for the home page
-  const renderPlanets = (planets: planets[]) => {
+  const renderPlanets = (planets: solarSystemPlanet[]) => {
     let width = 100;
     let top = 0;
     let animation = 6;

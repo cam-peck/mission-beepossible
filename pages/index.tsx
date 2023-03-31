@@ -63,47 +63,74 @@ export default function Home() {
       <nav className="w-full h-12 absolute bottom-4 md:bottom-12 flex justify-center">
         <ul className="w-4/5 h-full md:h-4/5 flex flex-wrap justify-around text-white">
           <li>
-            <Link className="basis-1/4 md:basis-1/12" href="/mercury">
+            <Link
+              className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+              href="/mercury"
+            >
               Mercury
             </Link>
           </li>
           <li>
-            <Link className="basis-1/4 md:basis-1/12" href="/venus">
+            <Link
+              className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+              href="/venus"
+            >
               Venus
             </Link>
           </li>
           <li>
-            <Link className="basis-1/4 md:basis-1/12" href="/earth">
+            <Link
+              className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+              href="/earth"
+            >
               Earth
             </Link>
           </li>
           <li>
-            <Link className="basis-1/4 md:basis-1/12" href="/mars">
+            <Link
+              className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+              href="/mars"
+            >
               Mars
             </Link>
           </li>
           <li>
-            <Link className="basis-1/4 md:basis-1/12" href="/jupiter">
+            <Link
+              className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+              href="/jupiter"
+            >
               Jupiter
             </Link>
           </li>
           <li>
-            <Link className="basis-1/4 md:basis-1/12" href="/saturn">
+            <Link
+              className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+              href="/saturn"
+            >
               Saturn
             </Link>
           </li>
           <li>
-            <Link className="basis-1/4 md:basis-1/12" href="/uranus">
+            <Link
+              className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+              href="/uranus"
+            >
               Uranus
             </Link>
           </li>
           <li>
-            <Link className="basis-1/4 md:basis-1/12" href="/neptune">
+            <Link
+              className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+              href="/neptune"
+            >
               Neptune
             </Link>
           </li>
           <li>
-            <Link className="basis-1/4 md:basis-1/12" href="/pluto">
+            <Link
+              className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+              href="/pluto"
+            >
               Pluto
             </Link>
           </li>

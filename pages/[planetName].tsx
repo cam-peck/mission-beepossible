@@ -2,20 +2,8 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import FactContainer from '../components/funFacts';
 import Moons from '../components/renderMoons';
-
+import { planet } from '@/lib/types';
 // all planet code for base planet component goes in here
-type testData = {
-  planetName: string;
-  diameter: number;
-  yearDiscovered: number;
-  distance: number;
-  planetType: string;
-  temperature: number;
-  funFact1: string;
-  funFact2: string;
-  funFact3: string;
-  visibleRings: boolean;
-};
 
 type moonTestData = {
   moonName: string;
@@ -24,7 +12,7 @@ type moonTestData = {
   diameter: number;
 };
 
-const testData: testData = {
+const testData: planet = {
   planetName: 'Mercury',
   diameter: 4879,
   yearDiscovered: 1610,
@@ -81,7 +69,7 @@ const moonTestData: moonTestData[] = [
 export default function Planets() {
   const router = useRouter();
   const { planetName } = router.query;
-  const [data, setData] = useState<testData>();
+  const [data, setData] = useState<planet>();
   const [core, setCore] = useState<boolean>(false);
 
   useEffect(() => {

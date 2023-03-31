@@ -2,6 +2,13 @@
   display: none;
 }
 
+.bee {
+  background-color: #61555a;
+  border-radius: 100% 98% 98% 100%;
+  box-shadow: inset 32px 0px 0px -20px #61555a, inset 48px 0px 0px -20px #fcd658,
+    inset 58px 0px 0px -20px #61555a, inset 88px 0px 0px -28px #fcd658;
+}
+
 .solid {
   background-color: rgb(225 175 100);
 }

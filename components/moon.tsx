@@ -49,6 +49,9 @@ const Moons = (props: MoonProps) => {
               </div>
               <div className="w-[20px] h-[10px] rounded-b-full border-b-2 border-l-2 border-gray-900 border-r-2 mt-2" />
             </div>
+            <div className="w-11/12 h-6 bg-blue-200 absolute bottom-4 rounded-b-full text-center">
+              {moonName}
+            </div>
           </div>
           <div
             className={`${display} p-2 absolute bg-gray-200 bg-opacity-50 rounded-2xl`}

@@ -4,13 +4,14 @@ import FactContainer from '../components/funFacts';
 import Moons from '../components/moon';
 import lowerCase from '@/lib/lowercaseWord';
 import { planet } from '@/lib/types';
+import LoadingBee from '@/components/loadingBee';
 
 export default function Planets() {
   const router = useRouter();
   const { planetName } = router.query;
   const [planetData, setPlanetData] = useState<planet>();
   const [core, setCore] = useState<boolean>(false);
-
+  const [loading, setLoading] = useState<boolean>(true);
   // lowercase the Earth word
 
   useEffect(() => {
@@ -30,11 +31,12 @@ export default function Planets() {
     };
     // loading spinner starts here!
     fetchPlanetData();
+    // setLoading(false);
     // loading spinner turns off here!
   }, [planetName]);
 
   if (!planetData) {
-    return <h1>LOADING. . .</h1>;
+    return;
   } else {
     const {
       planetName,
@@ -53,6 +55,7 @@ export default function Planets() {
       <>
         <div className="stars animate-[twinkle_300s_linear_infinite]" />
         <div className="h-full bg-gray-700 lg:h-screen">
+          <LoadingBee display={loading} />
           <p className="p-4 text-2xl font-bold text-center text-white lg:pb-6">
             Welcome to {planetName}!
           </p>

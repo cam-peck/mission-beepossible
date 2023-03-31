@@ -2,6 +2,7 @@ import Planet from '../components/planet';
 import planetsList from '@/lib/planet-list';
 import { solarSystemPlanet } from '@/lib/types';
 import Link from 'next/link';
+import lowerCase from '@/lib/lowercaseWord';
 
 export default function Home() {
   const renderPlanets = (planets: solarSystemPlanet[]) => {
@@ -21,7 +22,7 @@ export default function Home() {
       };
 
       const planetAnimation = animation + 's';
-      const name = planets.planetName.toLowerCase();
+      const name = lowerCase(planets.planetName);
 
       return (
         <div

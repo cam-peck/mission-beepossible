@@ -1,8 +1,13 @@
-const LoadingBee = () => {
+interface Loading {
+  display: boolean;
+}
+
+const LoadingBee = (props: Loading) => {
+  const display = props.display ? '' : 'hidden';
   return (
-    <>
+    <div className={`${display}`}>
       <div className="z-999 flex justify-center items-center fixed inset-0 w-full h-screen">
-        <div className="bg-gray-900 opacity-50 absolute w-full h-full"></div>
+        <div className="bg-gray-900 opacity-25 absolute w-full h-full"></div>
         <div className="w-[130px] h-[90px] relative animate-[zoom_2s_ease_infinite]">
           <div className="w-full h-full bee relative z-20">
             <div className="flex flex-col items-center mt-4 lg:mt-0 absolute right-0 w-1/3 pt-2 md:pt-4 lg:pt-8">
@@ -24,7 +29,7 @@ const LoadingBee = () => {
           <div className="w-3/4 aspect-square bg-blue-100 absolute top-[-5%] right-[-25%] z-50 opacity-50 rounded-full border-l-4 border-b-4 border-gray-400"></div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -53,7 +53,7 @@ export default function Planets() {
     return (
       <>
         <div className="h-full lg:h-screen">
-          <p className="p-4 text-2xl font-bold text-center text-white lg:pb-6">
+          <p className="p-4 text-6xl font-bold text-center text-white lg:pb-6">
             Welcome to {planetName}!
           </p>
           <div className="flex flex-wrap pb-8">

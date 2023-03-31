@@ -38,6 +38,14 @@ module.exports = {
           '0%, 100%': { transform: 'scale(1) rotate(5deg)' },
           '50%': { transform: 'scale(1.05) rotate(-5deg)' },
         },
+        zoom: {
+          '0%, 100%': {
+            transform: 'translateY(-50px) rotate(-5deg)',
+          },
+          '50%': {
+            transform: 'translateY(50px) rotate(5deg)',
+          },
+        },
       },
     },
   },

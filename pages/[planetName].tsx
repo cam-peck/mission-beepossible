@@ -4,7 +4,7 @@ import FactContainer from '../components/funFacts';
 import Moons from '../components/moon';
 import lowerCase from '@/lib/lowercaseWord';
 import { planet } from '@/lib/types';
-import LoadingBee from '@/components/loadingBee';
+import Loading from '@/components/loading';
 
 export default function Planets() {
   const router = useRouter();
@@ -35,7 +35,7 @@ export default function Planets() {
   }, [planetName]);
 
   if (!planetData || loading) {
-    return <LoadingBee />;
+    return <Loading />;
   } else {
     const {
       planetName,

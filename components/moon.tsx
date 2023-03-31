@@ -1,6 +1,6 @@
 import type { moon } from '@/lib/types';
 import { useEffect, useState } from 'react';
-import LoadingBee from './loadingBee';
+import Loading from './loading';
 
 interface MoonProps {
   planetName: string | string[] | undefined;
@@ -59,7 +59,7 @@ const Moons = (props: MoonProps) => {
     return moonLists;
   };
   if (!moonData || loading) {
-    return <LoadingBee />;
+    return <Loading />;
   } else {
     return moonData.length !== 0 ? (
       <div className="flex flex-wrap p-4">{renderMoons(moonData)}</div>

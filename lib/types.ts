@@ -23,3 +23,8 @@ export type moon = {
   yearDiscovered: number;
   diameter: number;
 };
+
+export type fact = {
+  factNum: number;
+  funFact: string;
+};

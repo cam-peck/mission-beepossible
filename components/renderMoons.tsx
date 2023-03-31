@@ -1,17 +1,12 @@
-type moonTestData = {
-  moonName: string;
-  nameHistory: string;
-  yearDiscovered: number;
-  diameter: number;
-};
+import type { moon } from '@/lib/types';
 
 interface moonData {
-  moonData: moonTestData[];
+  moonData: moon[];
 }
 
 const Moons = (props: moonData) => {
-  const renderMoons = (data: moonTestData[]) => {
-    const moonLists = data.map((moon: moonTestData) => {
+  const renderMoons = (data: moon[]) => {
+    const moonLists = data.map((moon: moon) => {
       return (
         <div
           key={moon.moonName}

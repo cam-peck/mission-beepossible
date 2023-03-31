@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Planet from '../components/planet';
 import { solarSystemPlanet } from '@/lib/types';
+import Link from 'next/link';
 
 const planetsList: solarSystemPlanet[] = [
   {
@@ -122,49 +123,49 @@ export default function Home() {
         <nav className="w-full h-12 absolute bottom-4 md:bottom-12 flex justify-center">
           <ul className="w-4/5 h-full md:h-4/5 flex flex-wrap justify-around text-white">
             <li>
-              <a className="basis-1/4 md:basis-1/12" href="/mercury">
+              <Link className="basis-1/4 md:basis-1/12" href="/mercury">
                 Mercury
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="basis-1/4 md:basis-1/12" href="/venus">
+              <Link className="basis-1/4 md:basis-1/12" href="/venus">
                 Venus
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="basis-1/4 md:basis-1/12" href="/earth">
+              <Link className="basis-1/4 md:basis-1/12" href="/earth">
                 Earth
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="basis-1/4 md:basis-1/12" href="/mars">
+              <Link className="basis-1/4 md:basis-1/12" href="/mars">
                 Mars
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="basis-1/4 md:basis-1/12" href="/jupiter">
+              <Link className="basis-1/4 md:basis-1/12" href="/jupiter">
                 Jupiter
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="basis-1/4 md:basis-1/12" href="/saturn">
+              <Link className="basis-1/4 md:basis-1/12" href="/saturn">
                 Saturn
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="basis-1/4 md:basis-1/12" href="/uranus">
+              <Link className="basis-1/4 md:basis-1/12" href="/uranus">
                 Uranus
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="basis-1/4 md:basis-1/12" href="/neptune">
+              <Link className="basis-1/4 md:basis-1/12" href="/neptune">
                 Neptune
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="basis-1/4 md:basis-1/12" href="/pluto">
+              <Link className="basis-1/4 md:basis-1/12" href="/pluto">
                 Pluto
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>

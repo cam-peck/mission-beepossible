@@ -1,13 +1,12 @@
 // @@Parameters: Pulls the planetName off of the URL
-// @@Return: Returns a planet of type Planet with all planet information
-// @@Example: fetch('/api/planets/venus', ...) will return all planet data for venus
+// @@Return: Returns an array of moons of type Moon with all moon information for a planet
+// @@Example: fetch('/api/moons/venus', ...) will return all moon data for venus
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import db from '@/lib/db';
 import capitalizeWord from '@/lib/capitalizeWord';
 
 type Moon = {
-  moonId: number;
   moonName: string;
   nameHistory: string;
   yearDiscovered: number;
@@ -22,7 +21,7 @@ export default async function handler(
   if (typeof planetName !== 'string') return;
   const capitalizedPlanet = capitalizeWord(planetName);
   const sql = `
-  SELECT "moonId", "moonName", "nameHistory", "yearDiscovered", "diameter"
+  SELECT "moonName", "nameHistory", "yearDiscovered", "diameter"
   FROM "moons"
   WHERE "planetName" = $1;
   `;

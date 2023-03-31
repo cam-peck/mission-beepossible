@@ -12,7 +12,6 @@ export default function Planets() {
   const [planetData, setPlanetData] = useState<planet>();
   const [core, setCore] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-  // lowercase the Earth word
 
   useEffect(() => {
     const fetchPlanetData = async () => {
@@ -29,14 +28,12 @@ export default function Planets() {
         // error handing goes here!
       }
     };
-    // loading spinner starts here!
     fetchPlanetData();
-    // setLoading(false);
-    // loading spinner turns off here!
+    setLoading(false);
   }, [planetName]);
 
   if (!planetData) {
-    return;
+    return <LoadingBee display={loading} />;
   } else {
     const {
       planetName,
@@ -53,9 +50,7 @@ export default function Planets() {
     const ring = core ? 'opacity-25' : 'opacity-100';
     return (
       <>
-        <div className="stars animate-[twinkle_300s_linear_infinite]" />
-        <div className="h-full bg-gray-700 lg:h-screen">
-          <LoadingBee display={loading} />
+        <div className="h-full lg:h-screen">
           <p className="p-4 text-2xl font-bold text-center text-white lg:pb-6">
             Welcome to {planetName}!
           </p>

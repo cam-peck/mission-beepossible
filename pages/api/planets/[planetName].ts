@@ -12,6 +12,7 @@ export default async function handler(
   res: NextApiResponse<planet>,
 ) {
   const { planetName } = req.query;
+  console.log(planetName);
   if (typeof planetName !== 'string') return;
   const capitalizedPlanet = capitalizeWord(planetName);
   const sql = `

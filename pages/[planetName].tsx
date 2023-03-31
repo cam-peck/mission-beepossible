@@ -2,37 +2,51 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import FactContainer from '../components/funFacts';
 import Moons from '../components/moon';
-import { planet, moon } from '@/lib/types';
-// all planet code for base planet component goes in here
-
-const testData: planet = {
-  planetName: 'Mercury',
-  diameter: 4879,
-  yearDiscovered: 1610,
-  distance: 57.9,
-  planetType: 'gas',
-  temperature: 167,
-  funFact1:
-    'Mercury is the fastest planet in the solar system. It travels at nearly 47 km / second. Zooooooom!',
-  funFact2:
-    'No life likely here -- the solar radiation and heat are pretty unfriendly...',
-  funFact3: 'We have a current mission out for Mercury -- the BepiColombo!',
-  visibleRings: false,
-};
+import lowerCase from '@/lib/lowercaseWord';
+import { planet } from '@/lib/types';
 
 export default function Planets() {
   const router = useRouter();
   const { planetName } = router.query;
-  const [data, setData] = useState<planet>();
+  const [planetData, setPlanetData] = useState<planet>();
   const [core, setCore] = useState<boolean>(false);
 
-  useEffect(() => {
-    setData(testData);
-  }, []);
+  // lowercase the Earth word
 
-  if (!data) {
+  useEffect(() => {
+    const fetchPlanetData = async () => {
+      const req = {
+        method: 'GET',
+      };
+      try {
+        if (!planetName) return;
+        const planetResponse = await fetch(`/api/planets/${planetName}`, req);
+        const planetData = await planetResponse.json();
+        setPlanetData(planetData);
+      } catch (err) {
+        console.error('An unexpected error occured');
+        // error handing goes here!
+      }
+    };
+    // loading spinner starts here!
+    fetchPlanetData();
+    // loading spinner turns off here!
+  }, [planetName]);
+
+  if (!planetData) {
     return <h1>LOADING. . .</h1>;
   } else {
+    const {
+      planetName,
+      planetType,
+      yearDiscovered,
+      distance,
+      diameter,
+      funFact1,
+      funFact2,
+      funFact3,
+    } = planetData;
+    const lowercasePlanetName = lowerCase(planetName);
     const display = core ? 'opacity-100' : 'opacity-0';
     const ring = core ? 'opacity-25' : 'opacity-100';
     return (
@@ -45,9 +59,9 @@ export default function Planets() {
           <div className="flex flex-wrap pb-8">
             <div className="m-auto basis-2/4 lg:basis-1/3 ">
               <div
-                className={`animate-[idle_10s_ease_infinite] m-auto w-full md:w-1/2 planet bg-${planetName} ${planetName}`}
+                className={`animate-[idle_10s_ease_infinite] m-auto w-full md:w-1/2 planet bg-${lowercasePlanetName} ${lowercasePlanetName}`}
               >
-                <div className={`${planetName}-ring ${ring}`} />
+                <div className={`${lowercasePlanetName}-ring ${ring}`} />
                 <div className="flex flex-col items-center w-1/4 pt-8">
                   <div className="flex justify-between w-full">
                     <div
@@ -63,12 +77,11 @@ export default function Planets() {
                   <div
                     onMouseEnter={() => setCore(true)}
                     onMouseLeave={() => setCore(false)}
-                    className={`duration-500 absolute w-1/2 flex items-center transition-opacity ${data.planetType} rounded-full bottom-4 lg:bottom-8 aspect-square ${display}`}
+                    className={`duration-500 absolute w-1/2 flex items-center transition-opacity ${planetType} rounded-full bottom-4 lg:bottom-8 aspect-square ${display}`}
                   >
                     <p className="w-full text-center">
                       I have a{' '}
-                      <span className="font-semibold">{data.planetType}</span>{' '}
-                      core!
+                      <span className="font-semibold">{planetType}</span> core!
                     </p>
                   </div>
                 </div>
@@ -81,11 +94,10 @@ export default function Planets() {
               </p>
               <p className="text-lg">
                 I was first discovered in{' '}
-                <span className="font-semibold">{data.yearDiscovered}</span>! I
-                was found to be{' '}
-                <span className="font-semibold">{data.distance}</span> million
-                km away from the sun and I have a diameter of{' '}
-                <span className="font-semibold">{data.diameter}</span> km!
+                <span className="font-semibold">{yearDiscovered}</span>! I was
+                found to be <span className="font-semibold">{distance}</span>{' '}
+                million km away from the sun and I have a diameter of{' '}
+                <span className="font-semibold">{diameter}</span> km!
               </p>
               <p className="pl-4 text-sm">
                 Mouse over me to see what kind of core I have!
@@ -93,9 +105,9 @@ export default function Planets() {
               <p className="pl-4 text-sm">*Click on mobile!</p>
             </div>
             <FactContainer
-              funFact1={data.funFact1}
-              funFact2={data.funFact2}
-              funFact3={data.funFact3}
+              funFact1={funFact1}
+              funFact2={funFact2}
+              funFact3={funFact3}
             />
           </div>
           <Moons planetName={planetName} />

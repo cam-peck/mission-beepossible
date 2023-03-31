@@ -1,9 +1,3 @@
-export type solarSystemPlanet = {
-  planetName: string;
-  visibleRings: boolean;
-  planetWidth: string;
-};
-
 export type planet = {
   planetName: string;
   diameter: number;
@@ -27,4 +21,10 @@ export type moon = {
 export type fact = {
   factNum: number;
   funFact: string;
+};
+
+export type solarSystemPlanet = {
+  planetName: string;
+  visibleRings: boolean;
+  planetWidth: string;
 };

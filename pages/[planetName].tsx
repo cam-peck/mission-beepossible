@@ -2,15 +2,8 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import FactContainer from '../components/funFacts';
 import Moons from '../components/renderMoons';
-import { planet } from '@/lib/types';
+import { planet, moon } from '@/lib/types';
 // all planet code for base planet component goes in here
-
-type moonTestData = {
-  moonName: string;
-  nameHistory: string;
-  yearDiscovered: number;
-  diameter: number;
-};
 
 const testData: planet = {
   planetName: 'Mercury',
@@ -27,7 +20,7 @@ const testData: planet = {
   visibleRings: false,
 };
 
-const moonTestData: moonTestData[] = [
+const moonTestData: moon[] = [
   {
     moonName: 'MoonOne',
     nameHistory: 'I named it',

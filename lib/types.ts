@@ -16,3 +16,10 @@ export type planet = {
   funFact3: string;
   visibleRings: boolean;
 };
+
+export type moon = {
+  moonName: string;
+  nameHistory: string;
+  yearDiscovered: number;
+  diameter: number;
+};

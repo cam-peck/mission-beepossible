@@ -9,26 +9,36 @@ interface PlanetProps {
 }
 
 const Planet: React.FC<PlanetProps> = (props: PlanetProps) => {
+  const {
+    planetName,
+    visibleRings,
+    planetWidth,
+    planetEyes,
+    planetMouthWidth,
+    planetMouthHeight,
+    animationDuration,
+  } = props;
+
   const planetStyle = {
-    animationDuration: props.animationDuration,
+    animationDuration,
   };
   const eyesStyle = {
-    width: props.planetEyes,
+    width: planetEyes,
   };
   const mouthStyle = {
-    width: props.planetMouthWidth,
-    height: props.planetMouthHeight,
+    width: planetMouthWidth,
+    height: planetMouthHeight,
   };
 
   function renderRing() {
-    if (props.visibleRings) {
-      return <div className={`${props.planetName}-ring`} />;
+    if (visibleRings) {
+      return <div className={`${planetName}-ring`} />;
     }
   }
 
   return (
     <div
-      className={`${props.planetWidth} planet bg-${props.planetName} ${props.planetName} animate-[front_linear_infinite]`}
+      className={`${planetWidth} planet bg-${planetName} ${planetName} animate-[front_linear_infinite]`}
       style={planetStyle}
     >
       {renderRing()}

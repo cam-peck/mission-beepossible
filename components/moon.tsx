@@ -1,5 +1,6 @@
 import type { moon } from '@/lib/types';
 import { useEffect, useState } from 'react';
+import LoadingBee from './loadingBee';
 
 interface MoonProps {
   planetName: string | string[] | undefined;
@@ -7,10 +8,12 @@ interface MoonProps {
 
 const Moons = (props: MoonProps) => {
   const [moonData, setMoonData] = useState<moon[]>();
+  const [loading, setLoading] = useState<boolean>(true);
   const { planetName } = props;
 
   useEffect(() => {
     const fetchMoonData = async () => {
+      setLoading(true);
       const req = {
         method: 'GET',
       };
@@ -24,9 +27,8 @@ const Moons = (props: MoonProps) => {
         // error handling needs added here!
       }
     };
-    // loading spinner on
     fetchMoonData();
-    // loading spinner off
+    setLoading(false);
   }, [planetName]);
 
   const renderMoons = (data: moon[]) => {
@@ -56,13 +58,15 @@ const Moons = (props: MoonProps) => {
     });
     return moonLists;
   };
-  if (moonData) {
+  if (!moonData || loading) {
+    return <LoadingBee />;
+  } else {
     return moonData.length !== 0 ? (
       <div className="flex flex-wrap p-4">{renderMoons(moonData)}</div>
     ) : (
       <h1 className="text-white">I am so lonely... All on my own....</h1>
     );
-  } else return <div></div>; // loadingspinner goes here
+  }
 };
 
 export default Moons;

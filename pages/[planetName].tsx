@@ -34,8 +34,8 @@ export default function Planets() {
     setLoading(false);
   }, [planetName]);
 
-  if (!planetData) {
-    return <LoadingBee display={loading} />;
+  if (!planetData || loading) {
+    return <LoadingBee />;
   } else {
     const {
       planetName,
@@ -112,7 +112,6 @@ export default function Planets() {
           </div>
           <Moons planetName={planetName} />
         </div>
-        <LoadingBee display={loading} />
       </>
     );
   }

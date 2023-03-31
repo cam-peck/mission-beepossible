@@ -20,20 +20,19 @@ export default function Home() {
         top: top + '%',
         animationDuration: animation + 's',
       };
-
       const planetAnimation = animation + 's';
       const name = lowerCase(planets.planetName);
-
+      const { visibleRings, planetWidth } = planets;
       return (
         <div
           className="aspect-square margin-auto rounded-full border-4 border-dotted border-gray-100 absolute animate-[circle_linear_infinite] preserve"
           style={style}
-          key={planets.planetName}
+          key={name}
         >
           <Planet
             planetName={name}
-            visibleRings={planets.visibleRings}
-            planetWidth={planets.planetWidth}
+            visibleRings={visibleRings}
+            planetWidth={planetWidth}
             planetEyes={'15%'}
             planetMouthHeight={'10%'}
             planetMouthWidth={'50%'}

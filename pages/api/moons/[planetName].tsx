@@ -5,17 +5,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import db from '@/lib/db';
 import capitalizeWord from '@/lib/capitalizeWord';
-
-type Moon = {
-  moonName: string;
-  nameHistory: string;
-  yearDiscovered: number;
-  diameter: number;
-};
+import { moon } from '@/lib/types';
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Moon[]>,
+  res: NextApiResponse<moon[]>,
 ) {
   const { planetName } = req.query;
   if (typeof planetName !== 'string') return;

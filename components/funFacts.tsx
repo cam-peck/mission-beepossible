@@ -27,19 +27,20 @@ const FactContainer = (props: funFacts) => {
 
   const renderFacts = (factsArray: fact[]) => {
     const factsList = factsArray.map((funFacts: fact) => {
-      const display = fact === funFacts.factNum ? '' : 'hidden';
+      const { factNum, funFact } = funFacts;
+      const display = fact === factNum ? '' : 'hidden';
       return (
-        <div className="w-full lg:pl-4 lg:w-4/5" key={funFacts.factNum}>
+        <div className="w-full lg:pl-4 lg:w-4/5" key={factNum}>
           <div
             className="pl-4 text-2xl font-bold text-white bg-gray-400 rounded-t cursor-pointer bg-opacity-20"
             onClick={() => {
-              setFact(funFacts.factNum);
+              setFact(factNum);
             }}
           >
-            Fun Fact #{funFacts.factNum}
+            Fun Fact #{factNum}
           </div>
           <p className={`${display} pl-4 text-white bg-white bg-opacity-20`}>
-            {funFacts.funFact}
+            {funFact}
           </p>
         </div>
       );

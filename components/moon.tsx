@@ -1,10 +1,34 @@
 import type { moon } from '@/lib/types';
+import { useEffect, useState } from 'react';
 
-interface moonData {
-  moonData: moon[];
+interface MoonProps {
+  planetName: string | string[] | undefined;
 }
 
-const Moons = (props: moonData) => {
+const Moons = (props: MoonProps) => {
+  const [moonData, setMoonData] = useState<moon[]>();
+  const { planetName } = props;
+
+  useEffect(() => {
+    const fetchMoonData = async () => {
+      const req = {
+        method: 'GET',
+      };
+      try {
+        if (planetName === undefined) return;
+        const moonResponse = await fetch(`/api/moons/${planetName}`, req);
+        const moonData = await moonResponse.json();
+        setMoonData(moonData);
+      } catch (err) {
+        console.error('An unexpected error occured');
+        // error handling needs added here!
+      }
+    };
+    // loading spinner on
+    fetchMoonData();
+    // loading spinner off
+  }, [planetName]);
+
   const renderMoons = (data: moon[]) => {
     const moonLists = data.map((moon: moon) => {
       return (
@@ -32,10 +56,13 @@ const Moons = (props: moonData) => {
     });
     return moonLists;
   };
-
-  return (
-    <div className="flex flex-wrap p-4">{renderMoons(props.moonData)}</div>
-  );
+  if (moonData) {
+    return moonData.length !== 0 ? (
+      <div className="flex flex-wrap p-4">{renderMoons(moonData)}</div>
+    ) : (
+      <h1 className="text-white">I am so lonely... All on my own....</h1>
+    );
+  } else return <div></div>; // loadingspinner goes here
 };
 
 export default Moons;

@@ -14,6 +14,7 @@ export default async function handler(
   const { planetName } = req.query;
   if (typeof planetName !== 'string') return;
   const capitalizedPlanet = capitalizeWord(planetName);
+  console.log(capitalizedPlanet);
   const sql = `
   SELECT "moonName", "nameHistory", "yearDiscovered", "diameter"
   FROM "moons"

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import FactContainer from '../components/funFacts';
-import Moons from '../components/renderMoons';
+import Moons from '../components/moon';
 import { planet, moon } from '@/lib/types';
 // all planet code for base planet component goes in here
 
@@ -19,45 +19,6 @@ const testData: planet = {
   funFact3: 'We have a current mission out for Mercury -- the BepiColombo!',
   visibleRings: false,
 };
-
-const moonTestData: moon[] = [
-  {
-    moonName: 'MoonOne',
-    nameHistory: 'I named it',
-    yearDiscovered: 6969,
-    diameter: 4200,
-  },
-  {
-    moonName: 'MoonTwo',
-    nameHistory: 'I named it',
-    yearDiscovered: 6969,
-    diameter: 4200,
-  },
-  {
-    moonName: 'MoonThree',
-    nameHistory: 'I named it',
-    yearDiscovered: 6969,
-    diameter: 4200,
-  },
-  {
-    moonName: 'MoonFour',
-    nameHistory: 'I named it',
-    yearDiscovered: 6969,
-    diameter: 4200,
-  },
-  {
-    moonName: 'MoonFive',
-    nameHistory: 'I named it',
-    yearDiscovered: 6969,
-    diameter: 4200,
-  },
-  {
-    moonName: 'MoonSix',
-    nameHistory: 'I named it',
-    yearDiscovered: 6969,
-    diameter: 4200,
-  },
-];
 
 export default function Planets() {
   const router = useRouter();
@@ -137,7 +98,7 @@ export default function Planets() {
               funFact3={data.funFact3}
             />
           </div>
-          <Moons moonData={moonTestData} />
+          <Moons planetName={planetName} />
         </div>
       </>
     );

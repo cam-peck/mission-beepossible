@@ -60,6 +60,9 @@ export default function Home() {
       <h1 className="text-white text-4xl md:text-5xl lg:text-6xl w-full text-center absolute top-4">
         Welcome to the Solar System!
       </h1>
+      <h2 className="text-white absolute top-24 lg:top-20 text-center w-full">
+        Click on a planet name at the bottom to get started!
+      </h2>
       <nav className="w-full h-12 absolute bottom-4 md:bottom-12 flex justify-center">
         <ul className="w-4/5 h-full md:h-4/5 flex flex-wrap justify-around text-white">
           <li>

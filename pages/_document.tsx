@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="lg:overflow-hidden h-full bg-gray-700 lg:h-screen">
+      <body className="h-full bg-gray-700 lg:h-screen">
         <div className="stars animate-[twinkle_300s_linear_infinite]" />
         <Main />
         <NextScript />

@@ -41,11 +41,7 @@ const Moons = (props: MoonProps) => {
           key={moonName}
           className="flex justify-center pt-6 basis-full md:basis-1/3 lg:basis-1/5"
         >
-          <div
-            className="w-2/5 planet moon animate-[idle_10s_linear_infinite]"
-            onMouseEnter={() => setShowMoon(moonName)}
-            onMouseLeave={() => setShowMoon('')}
-          >
+          <div className="w-2/5 planet moon animate-[idle_10s_linear_infinite]">
             <div className="flex flex-col items-center w-1/4 pt-8">
               <div className="flex justify-between w-full">
                 <div className="w-[5px] aspect-square bg-gray-900 rounded-full" />
@@ -55,14 +51,23 @@ const Moons = (props: MoonProps) => {
             </div>
           </div>
           <div
-            className={`${display} pl-4 absolute bg-gray-200 bg-opacity-50 rounded-2xl`}
+            className={`${display} p-2 absolute bg-gray-200 bg-opacity-50 rounded-2xl`}
             onMouseEnter={() => setShowMoon(moonName)}
             onMouseLeave={() => setShowMoon('')}
           >
-            <h1>Name: {moonName}</h1>
-            <p>History: {nameHistory}</p>
-            <p>Year Discovered: {yearDiscovered}</p>
-            <p>Diameter: {diameter} km</p>
+            <h1>
+              <span className="font-bold">Name:</span> {moonName}
+            </h1>
+            <p>
+              <span className="font-bold">History:</span> {nameHistory}
+            </p>
+            <p>
+              <span className="font-bold">Year</span> Discovered:{' '}
+              {yearDiscovered}
+            </p>
+            <p>
+              <span className="font-bold">Diameter:</span> {diameter} km
+            </p>
           </div>
         </div>
       );

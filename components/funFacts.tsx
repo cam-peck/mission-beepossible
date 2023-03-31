@@ -1,15 +1,11 @@
 import { useState } from 'react';
+import { fact } from '@/lib/types';
 
 interface funFacts {
   funFact1: string;
   funFact2: string;
   funFact3: string;
 }
-
-type fact = {
-  factNum: number;
-  funFact: string;
-};
 
 const FactContainer = (props: funFacts) => {
   const [fact, setFact] = useState<number>(0);

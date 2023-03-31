@@ -9,6 +9,7 @@ interface MoonProps {
 const Moons = (props: MoonProps) => {
   const [moonData, setMoonData] = useState<moon[]>();
   const [loading, setLoading] = useState<boolean>(true);
+  const [showMoon, setShowMoon] = useState<string>('');
   const { planetName } = props;
 
   useEffect(() => {
@@ -33,12 +34,18 @@ const Moons = (props: MoonProps) => {
 
   const renderMoons = (data: moon[]) => {
     const moonLists = data.map((moon: moon) => {
+      const { moonName, nameHistory, yearDiscovered, diameter } = moon;
+      const display = showMoon === moonName ? 'opacity-100' : 'opacity-0';
       return (
         <div
-          key={moon.moonName}
+          key={moonName}
           className="flex justify-center pt-6 basis-full md:basis-1/3 lg:basis-1/5"
         >
-          <div className="w-2/5 planet moon animate-[idle_10s_linear_infinite]">
+          <div
+            className="w-2/5 planet moon animate-[idle_10s_linear_infinite]"
+            onMouseEnter={() => setShowMoon(moonName)}
+            onMouseLeave={() => setShowMoon('')}
+          >
             <div className="flex flex-col items-center w-1/4 pt-8">
               <div className="flex justify-between w-full">
                 <div className="w-[5px] aspect-square bg-gray-900 rounded-full" />
@@ -47,11 +54,15 @@ const Moons = (props: MoonProps) => {
               <div className="w-[20px] h-[10px] rounded-b-full border-b-2 border-l-2 border-gray-900 border-r-2 mt-2" />
             </div>
           </div>
-          <div className="pl-4 text-white">
-            <h1>{moon.moonName}</h1>
-            <p>{moon.nameHistory}</p>
-            <p>{moon.yearDiscovered}</p>
-            <p>{moon.diameter}</p>
+          <div
+            className={`${display} pl-4 absolute bg-gray-200 bg-opacity-50 rounded-2xl`}
+            onMouseEnter={() => setShowMoon(moonName)}
+            onMouseLeave={() => setShowMoon('')}
+          >
+            <h1>Name: {moonName}</h1>
+            <p>History: {nameHistory}</p>
+            <p>Year Discovered: {yearDiscovered}</p>
+            <p>Diameter: {diameter} km</p>
           </div>
         </div>
       );

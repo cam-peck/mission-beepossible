@@ -15,6 +15,7 @@ export default function Planets() {
 
   useEffect(() => {
     const fetchPlanetData = async () => {
+      setLoading(true);
       const req = {
         method: 'GET',
       };
@@ -28,6 +29,7 @@ export default function Planets() {
         // error handing goes here!
       }
     };
+
     fetchPlanetData();
     setLoading(false);
   }, [planetName]);
@@ -110,6 +112,7 @@ export default function Planets() {
           </div>
           <Moons planetName={planetName} />
         </div>
+        <LoadingBee display={loading} />
       </>
     );
   }

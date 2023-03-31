@@ -1,0 +1,308 @@
+.hidden {
+  display: none;
+}
+
+.solid {
+  background-color: rgb(225 175 100);
+}
+
+.gas {
+  background-color: lightblue;
+  box-shadow: 0 0 20px 5px lightblue;
+}
+
+.planet {
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  box-shadow: inset 10px -10px 20px 20px rgb(0 0 0 / 20.7%);
+}
+
+.stars {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 1px;
+  width: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: -42vw -4vh 0 0 #fff, 25vw -41vh 0 0 #fff, -20vw 49vh 0 1px #fff,
+    5vw 40vh 1px 1px #fff, 29vw 19vh 1px 0 #fff, -44vw -13vh 0 0 #fff,
+    46vw 41vh 0 1px #fff, -3vw -45vh 0 1px #fff, 47vw 35vh 1px 0 #fff,
+    12vw -8vh 1px 0 #fff, -34vw 48vh 1px 1px #fff, 32vw 26vh 1px 1px #fff,
+    32vw -41vh 1px 1px #fff, 0 37vh 1px 1px #fff, 34vw -26vh 1px 0 #fff,
+    -14vw -49vh 1px 0 #fff, -12vw 45vh 0 1px #fff, -44vw -33vh 0 1px #fff,
+    -13vw 41vh 0 0 #fff, -36vw -11vh 0 1px #fff, -23vw -24vh 1px 0 #fff,
+    -38vw -27vh 0 1px #fff, 16vw -19vh 0 0 #fff, 28vw 33vh 1px 0 #fff,
+    -49vw -4vh 0 0 #fff, 16vw 32vh 0 1px #fff, 36vw -18vh 1px 0 #fff,
+    -25vw -30vh 1px 0 #fff, -23vw 24vh 0 1px #fff, -2vw -35vh 1px 1px #fff,
+    -25vw 9vh 0 0 #fff, -15vw -34vh 0 0 #fff, -8vw -19vh 1px 0 #fff,
+    -20vw -20vh 1px 1px #fff, 42vw 50vh 0 1px #fff, -32vw 10vh 1px 0 #fff,
+    -23vw -17vh 0 0 #fff, 44vw 15vh 1px 0 #fff, -40vw 33vh 1px 1px #fff,
+    -43vw 8vh 0 0 #fff, -48vw -15vh 1px 1px #fff, -24vw 17vh 0 0 #fff,
+    -31vw 50vh 1px 0 #fff, 36vw -38vh 0 1px #fff, -7vw 48vh 0 0 #fff,
+    15vw -32vh 0 0 #fff, 29vw -41vh 0 0 #fff, 2vw 37vh 1px 0 #fff,
+    7vw -40vh 1px 1px #fff, 15vw 18vh 0 0 #fff, 25vw -13vh 1px 1px #fff,
+    -46vw -12vh 1px 1px #fff, -18vw 22vh 0 0 #fff, 23vw -9vh 1px 0 #fff,
+    50vw 12vh 0 1px #fff, 45vw 2vh 0 0 #fff, 14vw -48vh 1px 0 #fff,
+    23vw 43vh 0 1px #fff, -40vw 16vh 1px 1px #fff, 20vw -31vh 0 1px #fff,
+    -17vw 44vh 1px 1px #fff, 18vw -45vh 0 0 #fff, 33vw -6vh 0 0 #fff,
+    0 7vh 0 1px #fff, -10vw -18vh 0 1px #fff, -19vw 5vh 1px 0 #fff,
+    1vw 42vh 0 0 #fff, 22vw 48vh 0 1px #fff, 39vw -8vh 1px 1px #fff,
+    -6vw -42vh 1px 0 #fff, -47vw 34vh 0 0 #fff, -46vw 19vh 0 1px #fff,
+    -12vw -32vh 0 0 #fff, -45vw -38vh 0 1px #fff, -28vw 18vh 1px 0 #fff,
+    -38vw -46vh 1px 1px #fff, 49vw -6vh 1px 1px #fff, -28vw 18vh 1px 1px #fff,
+    10vw -24vh 0 1px #fff, -5vw -11vh 1px 1px #fff, 33vw -8vh 1px 0 #fff,
+    -16vw 17vh 0 0 #fff, 18vw 27vh 0 1px #fff, -8vw -10vh 1px 1px #fff;
+  box-shadow: 24vw 9vh 1px 0 #fff, 12vw -24vh 0 1px #fff, -45vw -22vh 0 0 #fff,
+    -37vw -40vh 0 1px #fff, 29vw 19vh 0 1px #fff, 4vw -8vh 0 1px #fff,
+    -5vw 21vh 1px 1px #fff, -27vw 26vh 1px 1px #fff, -47vw -3vh 1px 1px #fff,
+    -28vw -30vh 0 1px #fff, -43vw -27vh 0 1px #fff, 4vw 22vh 1px 1px #fff,
+    36vw 23vh 0 0 #fff, -21vw 24vh 1px 1px #fff, -16vw 2vh 1px 0 #fff,
+    -16vw -6vh 0 0 #fff, 5vw 26vh 0 0 #fff, -34vw 41vh 0 0 #fff,
+    1vw 42vh 1px 1px #fff, 11vw -13vh 1px 1px #fff, 48vw -8vh 1px 0 #fff,
+    22vw -15vh 0 0 #fff, 45vw 49vh 0 0 #fff, 43vw -27vh 1px 1px #fff,
+    20vw -2vh 0 0 #fff, 8vw 22vh 0 1px #fff, 39vw 48vh 1px 1px #fff,
+    -21vw -11vh 0 1px #fff, -40vw 45vh 0 1px #fff, 11vw -30vh 1px 0 #fff,
+    26vw 30vh 1px 0 #fff, 45vw -29vh 0 1px #fff, -2vw 18vh 0 0 #fff,
+    -29vw -45vh 1px 0 #fff, -7vw -27vh 1px 1px #fff, 42vw 24vh 0 0 #fff,
+    45vw -48vh 1px 0 #fff, -36vw -18vh 0 0 #fff, -44vw 13vh 0 1px #fff,
+    36vw 16vh 0 1px #fff, 40vw 24vh 0 0 #fff, 18vw 11vh 0 0 #fff,
+    -15vw -23vh 1px 0 #fff, -24vw 48vh 0 1px #fff, 27vw -45vh 1px 0 #fff,
+    -2vw -24vh 0 1px #fff, -15vw -28vh 0 0 #fff, -43vw 13vh 1px 0 #fff,
+    7vw 27vh 1px 0 #fff, 47vw 5vh 0 0 #fff, -45vw 15vh 1px 1px #fff,
+    -5vw -28vh 0 1px #fff, 38vw 25vh 1px 1px #fff, -39vw -1vh 1px 0 #fff,
+    5vw 0 1px 0 #fff, 49vw 13vh 0 0 #fff, 48vw 10vh 0 1px #fff,
+    19vw -28vh 0 0 #fff, 4vw 7vh 0 0 #fff, 21vw 21vh 1px 1px #fff,
+    -15vw -15vh 0 1px #fff, -6vw -42vh 1px 0 #fff, -15vw 48vh 1px 1px #fff,
+    -23vw 25vh 1px 1px #fff, -48vw 25vh 0 1px #fff, -31vw -19vh 0 1px #fff,
+    4vw 37vh 1px 1px #fff, -43vw 28vh 0 0 #fff, 3vw -25vh 0 1px #fff,
+    -39vw 14vh 0 1px #fff, -40vw 31vh 0 1px #fff, 35vw -36vh 1px 1px #fff,
+    16vw 49vh 0 0 #fff, 6vw 39vh 0 0 #fff, 3vw -35vh 0 1px #fff,
+    -44vw -2vh 1px 0 #fff, -6vw 21vh 1px 0 #fff, 48vw 9vh 1px 1px #fff,
+    -43vw 30vh 1px 1px #fff, 29vw -12vh 1px 1px #fff, -48vw 13vh 1px 0 #fff,
+    -42vw 32vh 1px 1px #fff, 34vw 15vh 1px 1px #fff, 29vw -37vh 1px 1px #fff,
+    28vw 2vh 0 0 #fff;
+}
+
+.preserve {
+  transform-style: preserve-3d;
+}
+
+.up {
+  transform: rotateX(-90deg);
+}
+
+.mercury {
+  background-color: rgb(176 176 176);
+  background-image: radial-gradient(
+      circle at 8% 25%,
+      rgb(147 147 147) 10%,
+      transparent 10%
+    ),
+    radial-gradient(circle at 40% 70%, rgb(147 147 147) 15%, transparent 15%),
+    radial-gradient(circle at 60% 10%, rgb(147 147 147) 5%, transparent 5%),
+    radial-gradient(circle at 80% 51%, rgb(147 147 147) 4%, transparent 4%);
+}
+
+.venus {
+  background-color: rgb(179 121 82);
+  background-image: radial-gradient(
+      circle at 8% 25%,
+      rgb(126 87 60) 5%,
+      transparent 5%
+    ),
+    radial-gradient(circle at 30% 70%, rgb(126 87 60) 10%, transparent 10%),
+    radial-gradient(circle at 60% 10%, rgb(126 87 60) 5%, transparent 5%),
+    radial-gradient(circle at 70% 70%, rgb(126 87 60) 3%, transparent 3%),
+    radial-gradient(circle at 80% 30%, rgb(126 87 60) 2%, transparent 2%),
+    radial-gradient(circle at 80% 51%, rgb(126 87 60) 4%, transparent 4%);
+}
+
+.earth {
+  background-color: rgb(96 168 240);
+  background-image: radial-gradient(
+      ellipse at 12% 15%,
+      rgb(61 191 52) 15%,
+      transparent 5%
+    ),
+    radial-gradient(circle at 30% 58%, rgb(61 191 52) 10%, transparent 10%),
+    radial-gradient(ellipse at 30% 50%, rgb(61 191 52) 15%, transparent 15%),
+    radial-gradient(circle at 28% 62%, rgb(61 191 52) 8%, transparent 8%),
+    radial-gradient(ellipse at 24% 68%, rgb(61 191 52) 5%, transparent 5%),
+    radial-gradient(circle at 60% 0, rgb(255 255 255) 5%, transparent 5%),
+    radial-gradient(circle at 30% 100%, rgb(255 255 255) 9%, transparent 9%),
+    radial-gradient(circle at 80% 30%, rgb(61 191 52) 20%, transparent 20%),
+    radial-gradient(ellipse at 90% 60%, rgb(61 191 52) 15%, transparent 15%);
+}
+
+.mars {
+  background-color: rgb(211 88 88);
+  background-image: radial-gradient(
+      circle at 20% 5%,
+      rgb(119 34 34) 15%,
+      transparent 0
+    ),
+    radial-gradient(circle at 30% 100%, rgb(119 34 34) 15%, transparent 0),
+    radial-gradient(circle at 60% 110%, rgb(119 34 34) 15%, transparent 0),
+    radial-gradient(circle at 40% 40%, rgb(119 34 34) 18%, transparent 0),
+    radial-gradient(ellipse at 55% 50%, rgb(119 34 34) 20%, transparent 0),
+    radial-gradient(circle at 45% 0, rgb(119 34 34) 10%, transparent 0);
+}
+
+.jupiter {
+  background-image: radial-gradient(
+      ellipse at 70% 70%,
+      rgb(231 63 63) 10%,
+      transparent 0
+    ),
+    linear-gradient(
+      5deg,
+      rgb(213 64 64) 10%,
+      rgb(240 173 49) 0%,
+      rgb(240 173 49) 30%,
+      rgb(255 166 0) 30%,
+      rgb(255 166 0) 70%,
+      rgb(255 166 0) 70%,
+      rgb(255 195 84) 70%
+    );
+}
+
+.saturn {
+  background-image: linear-gradient(
+    175deg,
+    rgb(240 163 78) 20%,
+    rgb(253 220 161) 20%,
+    rgb(253 220 161) 28%,
+    rgb(222 100 16) 28%,
+    rgb(222 100 16) 36%,
+    rgb(230 135 26) 36%,
+    rgb(230 135 26) 38%,
+    rgb(222 100 16) 38%,
+    rgb(222 100 16) 46%,
+    rgb(253 220 161) 46%,
+    rgb(253 220 161) 75%,
+    rgb(230 135 26) 75%,
+    rgb(230 135 26) 80%,
+    rgb(240 163 78) 80%
+  );
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.saturn-ring {
+  position: absolute;
+  width: 200%;
+  top: -50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  background-image: radial-gradient(
+    circle at center,
+    transparent 40%,
+    rgb(222 100 16) 40%,
+    rgb(222 100 16) 50%,
+    rgb(253 220 161) 50%,
+    rgb(253 220 161) 60%,
+    rgb(222 100 16) 60%
+  );
+  transform: rotateX(80deg) rotateY(-10deg);
+  box-shadow: 0 10px 20px 20px rgb(0 0 0 / 20.7%);
+}
+
+.uranus {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(128 204 196) 20%,
+    rgb(174 237 227) 20%,
+    rgb(174 237 227) 25%,
+    rgb(71 198 179) 25%,
+    rgb(71 198 179) 30%,
+    rgb(120 206 195) 30%,
+    rgb(120 206 195) 60%,
+    rgb(71 198 179) 60%,
+    rgb(71 198 179) 70%,
+    rgb(123 205 195) 70%,
+    rgb(123 205 195) 80%,
+    rgb(89 181 176) 80%,
+    rgb(89 181 176) 90%,
+    rgb(177 233 224) 0
+  );
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.uranus-ring {
+  position: absolute;
+  width: 145%;
+  top: -50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  background-image: radial-gradient(
+    circle at center,
+    transparent 40%,
+    rgb(64 115 106) 40%,
+    rgb(177 233 224) 43%,
+    rgb(177 233 224) 64%,
+    rgb(66 114 106) 98%
+  );
+  transform: rotateX(110deg);
+  box-shadow: 0 10px 20px 20px rgb(0 0 0 / 20.7%);
+}
+
+.neptune {
+  background-image: radial-gradient(
+      ellipse at 25% 45%,
+      rgb(59 96 224) 10%,
+      transparent 0
+    ),
+    linear-gradient(
+      -5deg,
+      rgb(59 96 224) 10%,
+      rgb(97 138 249) 10%,
+      rgb(97 138 249) 30%,
+      rgb(59 96 224) 30%,
+      rgb(59 96 224) 45%,
+      rgb(97 138 249) 45%,
+      rgb(97 138 249) 70%,
+      rgb(59 96 224) 70%,
+      rgb(59 96 224) 80%,
+      rgb(97 138 249) 80%
+    );
+}
+
+.pluto {
+  background-color: rgb(230 158 93);
+  background-image: radial-gradient(
+      circle at 8% 25%,
+      rgb(253 220 161) 5%,
+      transparent 5%
+    ),
+    radial-gradient(circle at 30% 70%, rgb(253 220 161) 10%, transparent 10%),
+    radial-gradient(circle at 60% 10%, rgb(253 220 161) 5%, transparent 5%),
+    radial-gradient(circle at 70% 70%, rgb(253 220 161) 3%, transparent 3%),
+    radial-gradient(circle at 80% 30%, rgb(253 220 161) 2%, transparent 2%),
+    radial-gradient(circle at 80% 51%, rgb(253 220 161) 4%, transparent 4%);
+}
+
+.sun {
+  background-color: rgb(233 208 67);
+  box-shadow: 0 0 50px 10px rgb(241 241 152);
+}
+
+.moon {
+  background-color: rgb(196 196 196);
+  background-image: radial-gradient(
+      circle at 8% 25%,
+      rgb(146 146 146) 5%,
+      transparent 5%
+    ),
+    radial-gradient(circle at 30% 70%, rgb(146 146 146) 6%, transparent 6%),
+    radial-gradient(circle at 60% 10%, rgb(146 146 146) 5%, transparent 5%),
+    radial-gradient(circle at 70% 70%, rgb(146 146 146) 3%, transparent 3%),
+    radial-gradient(circle at 80% 30%, rgb(146 146 146) 2%, transparent 2%),
+    radial-gradient(circle at 40% 75%, rgb(146 146 146) 3%, transparent 3%),
+    radial-gradient(circle at 50% 55%, rgb(146 146 146) 2%, transparent 2%),
+    radial-gradient(circle at 80% 51%, rgb(146 146 146) 4%, transparent 4%);
+}

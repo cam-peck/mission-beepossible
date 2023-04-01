@@ -19,7 +19,7 @@ const Navigation = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
           onClick={() => {
-            setShowNavigation(!setShowNavigation);
+            setShowNavigation(!showNavigation);
           }}
         >
           <span className="w-7">

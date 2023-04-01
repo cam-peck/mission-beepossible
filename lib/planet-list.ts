@@ -39,7 +39,7 @@ const planetsList: solarSystemPlanet[] = [
   {
     planetName: 'Neptune',
     visibleRings: false,
-    planetWidth: 'w-12 md:w-16 lg:w-28',
+    planetWidth: 'w-12 md:w-16 lg:w-32',
   },
   {
     planetName: 'Pluto',

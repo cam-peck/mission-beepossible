@@ -1,9 +1,8 @@
 import Planet from '../components/planet';
 import planetsList from '@/lib/planet-list';
 import { solarSystemPlanet } from '@/lib/types';
-// import Link from 'next/link';
-import Navigation from '@/components/navigation';
 import lowerCase from '@/lib/lowercaseWord';
+import Bee from '@/components/bee';
 
 export default function Home() {
   const renderPlanets = (planets: solarSystemPlanet[]) => {
@@ -58,6 +57,12 @@ export default function Home() {
       <h1 className="text-white text-4xl md:text-5xl lg:text-6xl w-full text-center absolute top-20 ">
         Welcome to the Solar System!
       </h1>
+      <div className="absolute bottom-4 left-4 lg:bottom-12 lg:left-12">
+        <p className="text-white text-xl pl-36 pr-2">
+          Let&apos;s explore the planets together!
+        </p>
+        <Bee />
+      </div>
     </main>
   );
 }

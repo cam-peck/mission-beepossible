@@ -1,6 +1,12 @@
-const Bee = () => {
+interface BeeAnimation {
+  loading?: boolean;
+}
+
+const Bee = (props: BeeAnimation) => {
+  const animate = props.loading ? 'animate-[zoom_2s_ease_infinite]' : '';
+
   return (
-    <div className="w-[130px] h-[90px] relative animate-[zoom_2s_ease_infinite]">
+    <div className={`w-[130px] h-[90px] relative ${animate}`}>
       <div className="w-full h-full bee relative z-20">
         <div className="flex flex-col items-center mt-4 lg:mt-0 absolute right-0 w-1/3 pt-2 md:pt-4 lg:pt-8">
           <div className="flex justify-between w-1/2">

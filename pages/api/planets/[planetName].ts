@@ -3,30 +3,26 @@
 // @@Example: fetch('/api/planets/venus', ...) will return all planet data for venus
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-import db from '@/lib/db';
 import capitalizeWord from '@/lib/capitalizeWord';
 import { planet } from '@/lib/types';
+import prisma from '@/lib/prismaClient';
+import { planetNamesEnum } from '@prisma/client';
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<planet>,
 ) {
   const { planetName } = req.query;
-  console.log(planetName);
   if (typeof planetName !== 'string') return;
   const capitalizedPlanet = capitalizeWord(planetName);
-  const sql = `
-  SELECT *
-  FROM "planets"
-  WHERE "planetName" = $1;
-  `;
-  const params = [capitalizedPlanet];
   try {
-    const result = await db?.query(sql, params);
-    if (result) {
-      const [planet] = result.rows;
-      res.status(200).json(planet);
-    }
+    const planetData = await prisma.planets.findUnique({
+      where: {
+        planetName:
+          planetNamesEnum[capitalizedPlanet as keyof typeof planetNamesEnum],
+      },
+    });
+    if (planetData) res.json(planetData);
   } catch (err) {
     throw new Error('An unexpected serverside error occured.');
   }

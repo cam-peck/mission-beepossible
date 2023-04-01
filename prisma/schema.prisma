@@ -9,7 +9,7 @@ datasource db {
 
 model moons {
   moonId         Int     @id @default(autoincrement())
-  planetName     planet
+  planetName     planetNamesEnum
   moonName       String
   nameHistory    String
   yearDiscovered Int
@@ -18,10 +18,10 @@ model moons {
 }
 
 model planets {
-  planetName     planet     @id(map: "planets_pk")
+  planetName     planetNamesEnum     @id(map: "planets_pk")
   diameter       Int
   distance       Decimal    @db.Decimal
-  planetType     planettype
+  planetType     planetTypesEnum
   visibleRings   Boolean
   yearDiscovered Int
   temperature    Int
@@ -31,7 +31,7 @@ model planets {
   moons          moons[]
 }
 
-enum planet {
+enum planetNamesEnum {
   Mercury
   Venus
   Earth
@@ -43,7 +43,7 @@ enum planet {
   Pluto
 }
 
-enum planettype {
+enum planetTypesEnum {
   solid
   gas
 }

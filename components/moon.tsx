@@ -55,7 +55,7 @@ const Moons = (props: MoonProps) => {
             </div>
           </div>
           <div
-            className={`${display} p-2 absolute bg-gray-200 bg-opacity-50 rounded-2xl`}
+            className={`${display} max-w-sm p-2 absolute bg-gray-200 bg-opacity-50 rounded-2xl`}
             onMouseEnter={() => setShowMoon(moonName)}
             onMouseLeave={() => setShowMoon('')}
           >

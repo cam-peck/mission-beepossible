@@ -54,7 +54,7 @@ export default function Home() {
           {renderPlanets(planetsList)}
         </div>
       </div>
-      <h1 className="text-white text-4xl md:text-5xl lg:text-6xl w-full text-center absolute top-20 ">
+      <h1 className="z-[-20] text-white text-4xl md:text-5xl lg:text-6xl w-full text-center absolute top-20 ">
         Welcome to the Solar System!
       </h1>
       <div className="absolute bottom-4 left-4 lg:bottom-12 lg:left-12">

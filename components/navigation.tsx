@@ -2,17 +2,16 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const Navigation = () => {
-  const [showing, setShowing] = useState<boolean>(false);
-
-  const display = showing ? '' : 'hidden';
+  const [showNavigation, setShowNavigation] = useState<boolean>(false);
+  const display = showNavigation ? '' : 'hidden';
 
   return (
     <nav
-      className="fixed flex items-center justify-between w-full py-4 bg-opacity-25 bg-gray-900 flex-nowrap text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:flex-wrap lg:justify-start"
+      className="fixed flex items-center justify-between w-full py-4 bg-opacity-50 bg-gray-900 flex-nowrap text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:flex-wrap lg:justify-start"
       data-te-navbar-ref
     >
       <div className="flex flex-wrap items-center justify-between w-full px-6">
-        <div
+        <button
           className="block border-0 bg-transparent py-2 px-2.5 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
           data-te-collapse-init
           data-te-target="#navigation-bar"
@@ -20,10 +19,10 @@ const Navigation = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
           onClick={() => {
-            setShowing(!showing);
+            setShowNavigation(!setShowNavigation);
           }}
         >
-          <span className="[&>svg]:w-7">
+          <span className="w-7">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -37,7 +36,7 @@ const Navigation = () => {
               />
             </svg>
           </span>
-        </div>
+        </button>
         <div
           className={`${display} flex-grow basis-[100%] items-center lg:!flex lg:basis-auto`}
           id="navigation-bar"

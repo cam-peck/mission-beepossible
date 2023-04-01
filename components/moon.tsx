@@ -1,6 +1,7 @@
 import type { moon } from '@/lib/types';
 import { useEffect, useState } from 'react';
 import Loading from './loading';
+import Bee from './bee';
 
 interface MoonProps {
   planetName: string | string[] | undefined;
@@ -83,7 +84,12 @@ const Moons = (props: MoonProps) => {
     return moonData.length !== 0 ? (
       <div className="flex flex-wrap p-4">{renderMoons(moonData)}</div>
     ) : (
-      <h1 className="text-white">I am so lonely... All on my own....</h1>
+      <div className="pl-12">
+        <h1 className="text-white pl-36 pr-2">
+          This planet has no moons! Maybe the next one does!
+        </h1>
+        <Bee />
+      </div>
     );
   }
 };

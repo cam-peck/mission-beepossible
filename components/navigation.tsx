@@ -8,19 +8,20 @@ const Navigation = () => {
 
   return (
     <nav
-      className="fixed flex items-center justify-between w-full py-4 bg-opacity-75 bg-dark flex-nowrap text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:flex-wrap lg:justify-start"
+      className="fixed flex items-center justify-between w-full py-4 bg-opacity-25 bg-gray-900 flex-nowrap text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:flex-wrap lg:justify-start"
       data-te-navbar-ref
     >
       <div className="flex flex-wrap items-center justify-between w-full px-6">
-        <button
+        <div
           className="block border-0 bg-transparent py-2 px-2.5 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
-          type="button"
           data-te-collapse-init
-          data-te-target="#navbarSupportedContent3"
-          aria-controls="navbarSupportedContent3"
+          data-te-target="#navigation-bar"
+          aria-controls="navigation-bar"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          onClick={() => setShowing(!showing)}
+          onClick={() => {
+            setShowing(!showing);
+          }}
         >
           <span className="[&>svg]:w-7">
             <svg
@@ -36,10 +37,10 @@ const Navigation = () => {
               />
             </svg>
           </span>
-        </button>
+        </div>
         <div
-          className={`!visible ${display} flex-grow basis-[100%] items-center lg:!flex lg:basis-auto transition-all duration-100`}
-          id="navbarSupportedContent3"
+          className={`${display} flex-grow basis-[100%] items-center lg:!flex lg:basis-auto`}
+          id="navigation-bar"
           data-te-collapse-item
         >
           <ul
@@ -48,7 +49,7 @@ const Navigation = () => {
           >
             <li>
               <Link
-                className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+                className="p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/"
               >
                 Home
@@ -56,7 +57,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+                className="p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/mercury"
               >
                 Mercury
@@ -64,7 +65,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+                className="p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/venus"
               >
                 Venus
@@ -72,7 +73,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+                className="p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/earth"
               >
                 Earth
@@ -80,7 +81,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+                className="p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/mars"
               >
                 Mars
@@ -88,7 +89,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+                className="p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/jupiter"
               >
                 Jupiter
@@ -96,7 +97,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+                className="p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/saturn"
               >
                 Saturn
@@ -104,7 +105,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+                className="p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/uranus"
               >
                 Uranus
@@ -112,7 +113,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+                className="p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/neptune"
               >
                 Neptune
@@ -120,7 +121,7 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                className="p-3 rounded basis-1/4 md:basis-1/12 hover:bg-gray-400 hover:bg-opacity-50"
+                className="p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/pluto"
               >
                 Pluto

@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <main>
       <div className="flex items-center justify-center h-screen">
-        <div className="w-20 lg:w-52 aspect-square planet sun absolute preserve">
+        <div className="w-20 md:w-32 lg:w-52 aspect-square planet sun absolute preserve">
           <div className="flex flex-col items-center w-1/2 pt-4 md:pt-8 lg:pt-16 lg:w-1/3">
             <div className="flex justify-between w-full">
               <div className="w-[5px] lg:w-[10px] aspect-square bg-gray-900 rounded-full" />
@@ -55,9 +55,9 @@ export default function Home() {
           {renderPlanets(planetsList)}
         </div>
       </div>
-      {/* <h1 className="text-white text-4xl md:text-5xl lg:text-6xl w-full text-center absolute top-4">
+      <h1 className="text-white text-4xl md:text-5xl lg:text-6xl w-full text-center absolute top-20 ">
         Welcome to the Solar System!
-      </h1> */}
+      </h1>
     </main>
   );
 }

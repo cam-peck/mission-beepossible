@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model moons {
+  moonId         Int     @id @default(autoincrement())
+  planetName     planet
+  moonName       String
+  nameHistory    String
+  yearDiscovered Int
+  diameter       Int
+  planets        planets @relation(fields: [planetName], references: [planetName], onDelete: NoAction, onUpdate: NoAction, map: "moons_fk0")
+}
+
+model planets {
+  planetName     planet     @id(map: "planets_pk")
+  diameter       Int
+  distance       Decimal    @db.Decimal
+  planetType     planettype
+  visibleRings   Boolean
+  yearDiscovered Int
+  temperature    Int
+  funFact1       String
+  funFact2       String
+  funFact3       String
+  moons          moons[]
+}
+
+enum planet {
+  Mercury
+  Venus
+  Earth
+  Mars
+  Jupiter
+  Saturn
+  Uranus
+  Neptune
+  Pluto
+}
+
+enum planettype {
+  solid
+  gas
+}

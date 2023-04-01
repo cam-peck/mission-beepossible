@@ -5,6 +5,7 @@ import Moons from '../components/moon';
 import lowerCase from '@/lib/lowercaseWord';
 import { planet } from '@/lib/types';
 import Loading from '@/components/loading';
+import Link from 'next/link';
 
 export default function Planets() {
   const router = useRouter();

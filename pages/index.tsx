@@ -21,7 +21,7 @@ export default function Home() {
       </h1>
       <div className="absolute bottom-4 left-4 lg:bottom-12 lg:left-12">
         <p className="text-white text-lg md:text-xl pl-36 pr-2">
-          Your mission, should you choose to accept it, is to explore the Solar
+          Your mission, should you decide to accept it, is to explore the Solar
           System and learn more about the planets with me!
         </p>
         <Bee />

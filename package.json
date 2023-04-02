@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:import": "sh database/import.sh"
+    "db:import": "sh prisma/import.sh"
   },
   "prisma": {
-    "seed": "sh prisma/seed.sh"
+    "seed": "sh prisma/import.sh --reset"
   },
   "dependencies": {
     "@prisma/client": "^4.12.0",

@@ -7,10 +7,9 @@ if [ -f "$PWD"/.env ]; then
   . "$PWD"/.env
 fi
 
-if [ -n "$DATABASE_URL" ]; then
-  psql "$DATABASE_URL" \
-    -f "$PWD"/database/schema.sql \
-    -f "$PWD"/database/data.sql
+if [ -n "$DEV_DATABASE_URL" ]; then
+  psql "$DEV_DATABASE_URL" \
+    -f "$PWD"/prisma/data.sql
 else
   echo 'no DATABASE_URL environment variable set' 1>&2
   exit 1

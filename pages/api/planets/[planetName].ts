@@ -13,7 +13,10 @@ export default async function handler(
   res: NextApiResponse<planet>,
 ) {
   const { planetName } = req.query;
-  if (typeof planetName !== 'string') return;
+  if (typeof planetName !== 'string') {
+    console.log('returning');
+    return;
+  }
   const capitalizedPlanet = capitalizeWord(planetName);
   try {
     const planetData = await prisma.planets.findUnique({

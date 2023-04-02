@@ -95,7 +95,8 @@ export default function Planets() {
               <p className="text-lg">
                 I was first discovered in{' '}
                 <span className="font-semibold">{yearDiscovered}</span>! I was
-                found to be <span className="font-semibold">{distance}</span>{' '}
+                found to be{' '}
+                <span className="font-semibold">{Number(distance)}</span>{' '}
                 million km away from the sun and I have a diameter of{' '}
                 <span className="font-semibold">{diameter}</span> km!
               </p>

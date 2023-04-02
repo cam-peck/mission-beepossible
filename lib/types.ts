@@ -1,8 +1,10 @@
+import { Decimal } from '@prisma/client/runtime';
+
 export type planet = {
   planetName: string;
   diameter: number;
   yearDiscovered: number;
-  distance: number;
+  distance: Decimal;
   planetType: string;
   temperature: number;
   funFact1: string;

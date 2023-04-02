@@ -19,7 +19,8 @@
 		"vscode": {
 			"extensions": [
 				"esbenp.prettier-vscode",
-				"AdamCaviness.theme-monokai-dark-soda"
+				"AdamCaviness.theme-monokai-dark-soda",
+				"Prisma.prisma"
 			]
 		}
 	}

@@ -12,7 +12,7 @@ const Moons = (props: MoonProps) => {
   const [moonData, setMoonData] = useState<moon[]>();
   const [loading, setLoading] = useState<boolean>(true);
   const [showMoon, setShowMoon] = useState<string>('');
-  const { planetName } = props;
+  const { planetName, setError } = props;
 
   useEffect(() => {
     const fetchMoonData = async () => {
@@ -26,12 +26,12 @@ const Moons = (props: MoonProps) => {
         setMoonData(moonData);
       } catch (err) {
         console.error(err);
-        props.setError(true);
+        setError(true);
       }
     };
     fetchMoonData();
     setLoading(false);
-  }, [planetName]);
+  }, [planetName, setError]);
 
   const renderMoons = (data: moon[]) => {
     const moonLists = data.map((moon: moon) => {

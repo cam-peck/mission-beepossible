@@ -10,7 +10,7 @@ const ErrorPage = (props: ErrorPage) => {
     <div className="flex flex-wrap flex-row-reverse justify-center h-screen items-center">
       <div className="basis-full md:basis-1/2 p-4 text-white text-lg md:text-2xl">
         <p>
-          Sorry, but <span className="font-bolod">{props.errorName}</span>{' '}
+          Sorry, but <span className="font-bold">{props.errorName}</span>{' '}
           isn&apos;t one of the planets or moons in our Solar System.
         </p>
         <p>

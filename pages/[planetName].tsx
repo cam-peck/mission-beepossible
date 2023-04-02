@@ -15,7 +15,6 @@ export default function Planets() {
 
   useEffect(() => {
     const fetchPlanetData = async () => {
-      setLoading(true);
       const req = {
         method: 'GET',
       };

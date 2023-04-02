@@ -62,7 +62,7 @@ export default function Planets() {
           <div className="flex flex-wrap pb-8">
             <div className="m-auto basis-2/4 lg:basis-1/3 ">
               <div
-                className={`animate-[idle_10s_ease_infinite] m-auto w-full md:w-1/2 planet bg-${lowercasePlanetName} ${lowercasePlanetName}`}
+                className={`animate-[idle_10s_ease_infinite] m-auto w-full md:w-1/2 planet ${lowercasePlanetName}`}
               >
                 <div className={`${lowercasePlanetName}-ring ${ring}`} />
                 <div className="flex flex-col items-center w-1/4 pt-8">

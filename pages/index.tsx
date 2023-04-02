@@ -6,7 +6,7 @@ export default function Home() {
     <main>
       <div className="flex items-center justify-center h-screen">
         <div className="w-20 md:w-32 lg:w-52 aspect-square planet sun absolute preserve">
-          <div className="flex flex-col items-center w-1/2 pt-4 md:pt-8 lg:pt-16 lg:w-1/3">
+          <div className="flex flex-col items-center w-1/3 md:w-1/2 pt-4 md:pt-8 lg:pt-16 lg:w-1/3">
             <div className="flex justify-between w-full">
               <div className="w-[5px] lg:w-[10px] aspect-square bg-gray-900 rounded-full" />
               <div className="w-[5px] lg:w-[10px] aspect-square bg-gray-900 rounded-full" />
@@ -20,8 +20,9 @@ export default function Home() {
         Welcome to the Solar System!
       </h1>
       <div className="absolute bottom-4 left-4 lg:bottom-12 lg:left-12">
-        <p className="text-white text-xl pl-36 pr-2">
-          Let&apos;s explore the planets together!
+        <p className="text-white text-lg md:text-xl pl-36 pr-2">
+          Your mission, should you choose to accept it, is to explore the Solar
+          System and learn more about the planets with me!
         </p>
         <Bee />
       </div>

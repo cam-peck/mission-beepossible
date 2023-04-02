@@ -4,14 +4,14 @@ import FactContainer from '../components/funFacts';
 import Moons from '../components/moon';
 import lowerCase from '@/lib/lowercaseWord';
 import { planet } from '@/lib/types';
+import Loading from '@/components/loading';
 
 export default function Planets() {
   const router = useRouter();
   const { planetName } = router.query;
   const [planetData, setPlanetData] = useState<planet>();
   const [core, setCore] = useState<boolean>(false);
-
-  // lowercase the Earth word
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchPlanetData = async () => {
@@ -28,13 +28,13 @@ export default function Planets() {
         // error handing goes here!
       }
     };
-    // loading spinner starts here!
+
     fetchPlanetData();
-    // loading spinner turns off here!
+    setLoading(false);
   }, [planetName]);
 
-  if (!planetData) {
-    return <h1>LOADING. . .</h1>;
+  if (!planetData || loading) {
+    return <Loading />;
   } else {
     const {
       planetName,
@@ -51,9 +51,8 @@ export default function Planets() {
     const ring = core ? 'opacity-25' : 'opacity-100';
     return (
       <>
-        <div className="stars animate-[twinkle_300s_linear_infinite]" />
-        <div className="h-full bg-gray-700 lg:h-screen">
-          <p className="p-4 text-2xl font-bold text-center text-white lg:pb-6">
+        <div className="h-full lg:h-screen">
+          <p className="pt-20 lg:pt-16 text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white lg:pb-6">
             Welcome to {planetName}!
           </p>
           <div className="flex flex-wrap pb-8">

@@ -5,6 +5,7 @@ import Moons from '../components/moon';
 import lowerCase from '@/lib/lowercaseWord';
 import { planet } from '@/lib/types';
 import Loading from '@/components/loading';
+import ErrorPage from '@/components/errorPage';
 
 export default function Planets() {
   const router = useRouter();
@@ -12,6 +13,7 @@ export default function Planets() {
   const [planetData, setPlanetData] = useState<planet>();
   const [core, setCore] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchPlanetData = async () => {
@@ -24,8 +26,8 @@ export default function Planets() {
         const planetData = await planetResponse.json();
         setPlanetData(planetData);
       } catch (err) {
-        console.error('An unexpected error occured');
-        // error handing goes here!
+        console.error(err);
+        setError(true);
       }
     };
 
@@ -33,7 +35,9 @@ export default function Planets() {
     setLoading(false);
   }, [planetName]);
 
-  if (!planetData || loading) {
+  if (error) {
+    return <ErrorPage errorName={planetName} />;
+  } else if (!planetData || loading) {
     return <Loading />;
   } else {
     const {

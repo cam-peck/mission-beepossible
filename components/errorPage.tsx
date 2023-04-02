@@ -2,19 +2,16 @@ import Link from 'next/link';
 import Bee from './bee';
 
 interface ErrorPage {
-  name: string;
+  errorName: string | string[] | undefined;
 }
 
 const ErrorPage = (props: ErrorPage) => {
   return (
-    <div className="flex justify-center h-screen items-center">
-      <div className="basis-1/4">
-        <Bee />
-      </div>
-      <div className="basis-1/2 text-white text-2xl">
+    <div className="flex flex-wrap flex-row-reverse justify-center h-screen items-center">
+      <div className="basis-full md:basis-1/2 p-4 text-white text-lg md:text-2xl">
         <p>
-          Sorry, but {props.name} isn&apos;t one of the planets in our Solar
-          System.
+          Sorry, but {props.errorName} isn&apos;t one of the planets in our
+          Solar System.
         </p>
         <p>
           Please choose one from our navigation menu or click{' '}
@@ -23,6 +20,9 @@ const ErrorPage = (props: ErrorPage) => {
           </Link>{' '}
           to return to the Home page and see them all!
         </p>
+      </div>
+      <div className="basis-full flex justify-center md:basis-1/4">
+        <Bee />
       </div>
     </div>
   );

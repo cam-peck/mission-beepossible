@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Bee from './bee';
 
 interface ErrorPage {
   name: string;
@@ -7,8 +8,10 @@ interface ErrorPage {
 const ErrorPage = (props: ErrorPage) => {
   return (
     <div className="flex justify-center h-screen items-center">
-      <div>{/* This will hold the bee */}</div>
-      <div>
+      <div className="basis-1/4">
+        <Bee />
+      </div>
+      <div className="basis-1/2 text-white text-2xl">
         <p>
           Sorry, but {props.name} isn&apos;t one of the planets in our Solar
           System.

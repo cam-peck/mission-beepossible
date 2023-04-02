@@ -1,7 +1,7 @@
 const Mercury = () => {
   return (
     <div
-      className={`w-6 md:w-10 lg:w-16 planet mercury animate-[front_10s_linear_infinite]`}
+      className={`w-6 md:w-10 lg:w-16 delay-4 planet mercury animate-[front_10s_linear_infinite]`}
     >
       <div className="flex flex-col items-center w-1/3 pt-2 md:pt-4">
         <div className="flex justify-between w-full">

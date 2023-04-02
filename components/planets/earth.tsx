@@ -1,7 +1,7 @@
 const Earth = () => {
   return (
     <div
-      className={`w-10 md:w-16 lg:w-24 planet earth animate-[front_18s_linear_infinite]`}
+      className={`w-10 md:w-16 lg:w-24 delay-2 planet earth animate-[front_18s_linear_infinite]`}
     >
       <div className="flex flex-col items-center w-1/3 pt-2 md:pt-4 lg:pt-8">
         <div className="flex justify-between w-full">

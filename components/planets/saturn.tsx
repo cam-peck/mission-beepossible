@@ -1,7 +1,7 @@
 const Saturn = () => {
   return (
     <div
-      className={`w-14 md:w-24 lg:w-36 planet saturn animate-[front_30s_linear_infinite]`}
+      className={`w-14 md:w-24 lg:w-36 delay-1 planet saturn animate-[front_30s_linear_infinite]`}
     >
       <div className="saturn-ring" />
       <div className="flex flex-col items-center w-1/3 pt-2 md:pt-4 lg:pt-8">

@@ -201,6 +201,22 @@ values ('Neptune', 'Depsina', '', 1989, 156);
 insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
 values ('Neptune', 'Galatea', '', 1989, 175);
 
+INSERT INTO "moons" ("planetName", "moonName", "nameHistory", "diameter", "yearDiscovered")
+VALUES
+('Neptune',	'Naiad',	'The Naiads, female spirits (nymphs) associated with bodies of freshwater',	66,	1989),
+('Neptune',	'Thalassa',	'The sea goddess Thalassa',	82,	1989),
+('Neptune',	'Despina',	'The nymph Despoina',	150,	1989),
+('Neptune',	'Galatea',	'Galatea, one of the Nereids',	174.8,	1989),
+('Neptune',	'Larissa',	'Larissa, nymph and lover of Poseidon',	194,	1981),
+('Neptune',	'Hippocamp',	'Hippocampus, a mythical creature associated with Poseidon',	18,	2013),
+('Neptune',	'Proteus',	'The shapeshifting sea god Proteus',	420,	1989),
+('Neptune',	'Triton',	'The sea god Triton',	2706.8,	1846),
+('Neptune',	'Nereid',	'The Nereids, a group of sea nymphs',	340,	1949),
+('Neptune',	'Halimede',	'Halimede, one of the Nereids',	62,	2002),
+('Neptune',	'Sao',	'Sao, one of the Nereids',	40,	2002),
+('Neptune',	'Laomedeia',	'Laomedeia, one of the Nereids',	40,	2002),
+('Neptune',	'Psamathe',	'Psamathe, one of the Nereids',	38,	2003),
+('Neptune',	'Neso',	'Neso, one of the Nereids',	60,	2002)
 -- Pluto --
 
 insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")

@@ -1,38 +1,122 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Mission Beepossible
 
-## Getting Started
+A full-stack Next.js (w/TypeScript) application for future astronauts to learn about the universe.
 
-First, run the development server:
+## Why Build This?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+The Dear Junior Dev Discord community challenge for this past week was to build an application to teach other about the solar system. Requirements were as follows:
+
+```
+Planets:
+
+-- Each planet of the solar system must have its own profile page.
+-- Each page must include at a minimum (Name of the planet, size, distance from the Sun, three identifying facts, solid or gas core, and a visual representation of the planet)
+-- NOTE: No images, assets, emojis, or SVGs are permitted. The visual representation of each planet must be made ENTIRELY out of CSS.
+-- If the planet has a moon, you must display the following information for every moon (Name, history behind name, and size).
+-- Planet pages must include at least two different components that are NOT used on your homepage.
+-- If a planet has more than one moon, the moon information must be displayed in repeating elements.
+-- All planet and moon content MUST be stored in a database.
+
+
+Backend:
+
+-- You must use foreign keys.
+-- Planets and Moons must be stored separate from one another.
+-- You must incorporate one ENUM for the planet data.
+
+Homepage:
+
+-- The homepage should be an overview of the solar system.
+-- The data included will be up to each team.
+-- The homepage must include at least two components that are NOT used on any planet page.
+-- Homepage content does not need to be stored in a database and can be coded into your components.
+
+REAME:
+
+-- Your README must include instructions for me to spin up the project locally, as well as an overview of the tech and/or libraries used.
+-- It should also include a list of the Quackathon requirements and how those were met or exceeded by your team.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Techonologies Used
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- Next.js
+- TypeScript
+- React
+- TailwindCSS
+- CSS3
+- Docker
+- PostgreSQL
+- Prisma
+- Supabase (for deployment)
+- Vercel (for deployment)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Live Deployment
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Check out the site --> https://mission-beepossible.vercel.app/
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project Summary
 
-## Learn More
+This was a big step up over the previous weekend flex-box project!
 
-To learn more about Next.js, take a look at the following resources:
+1. Planning
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- We had a long(ish) meeting before we starting coding to decide on our tech stack and database schema. We chose Next.js because we both love React, and felt that React would be a good choice for a Single Page Application. We're also both currently learning Next, and thought this project would be a great opportunity to practice with Next (it was!). We went with TailwindCSS for responsive styling and general CSS, and Brandon added custom CSS for the planets via vanilla CSS3. We developed in a docker devcontainer that spun up the app along with PostgreSQL for easy local development. I decided to use Prisma and Supabase for deployment after looking online and finding lots of good documentation on their integration with Vercel.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. The Coding
 
-## Deploy on Vercel
+- We spent a large portion of the week working on the code. We moved in chunks, submitting all PRs to GitHub for the other person to check before merging into main. We did our best to stay out of each other's files, but did have to resolve a few merge conflicts. (Luckily, they weren't too bad!!!) Once we finished up all of the primary features on Friday, I got the cloud database setup via Supabase, and we deployed the website early Sunday morning. We cleaned up the remaining moon data on Sunday along with some lingering bugs and then submitted the project!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Preview
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Home Page!
+
+![DEMO](public/readme-home.gif)
+
+### Planet Page!
+
+![DEMO](public/readme-planet-data.gif)
+
+### Mobile View!
+
+![DEMO](public/readme-responsive.gif)
+
+## Development
+
+### System Requirements
+
+- Docker
+- Node v18+
+- NPM
+
+### Getting Started
+
+1. Clone the repository.
+
+```
+git clone https://github.com/cam-peck/mission-beepossible
+cd flex-bee
+```
+
+2. Make a copy of the provided `.env.example` file. Name your copy `.env`.
+
+```
+cp .env.example .env
+```
+
+3. Sync your database with prisma.
+
+```
+npm run prisma:schema
+```
+
+4. Generate your prisma client.
+
+```
+npm run prisma:generate
+```
+
+5. You're good to go! To start developing...
+
+```
+npm run dev
+```

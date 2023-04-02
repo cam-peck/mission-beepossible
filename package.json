@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:import": "sh prisma/import.sh"
+    "db:import": "sh prisma/import.sh",
+    "prisma:generate": "prisma generate",
+    "prisma:schema": "prisma db push"
   },
   "prisma": {
     "seed": "sh prisma/import.sh --reset"

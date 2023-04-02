@@ -24,9 +24,3 @@ export type fact = {
   factNum: number;
   funFact: string;
 };
-
-export type solarSystemPlanet = {
-  planetName: string;
-  visibleRings: boolean;
-  planetWidth: string;
-};

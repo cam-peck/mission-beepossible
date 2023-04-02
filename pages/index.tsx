@@ -1,45 +1,7 @@
-import Planet from '../components/planet';
-import planetsList from '@/lib/planet-list';
-import { solarSystemPlanet } from '@/lib/types';
-import lowerCase from '@/lib/lowercaseWord';
 import Bee from '@/components/bee';
+import Orbit from '@/components/orbit';
 
 export default function Home() {
-  const renderPlanets = (planets: solarSystemPlanet[]) => {
-    let width = 100;
-    let top = 0;
-    let animation = 6;
-
-    const orbitPlanets = planets.map((planets) => {
-      width += 40;
-      top -= 20;
-      animation += 4;
-
-      const style = {
-        width: width + '%',
-        top: top + '%',
-        animationDuration: animation + 's',
-      };
-      const planetAnimation = animation + 's';
-      const name = lowerCase(planets.planetName);
-      const { visibleRings, planetWidth } = planets;
-      return (
-        <div
-          className="aspect-square margin-auto rounded-full border-4 border-dotted border-gray-100 absolute animate-[circle_linear_infinite] preserve"
-          style={style}
-          key={name}
-        >
-          <Planet
-            planetName={name}
-            visibleRings={visibleRings}
-            planetWidth={planetWidth}
-            animationDuration={planetAnimation}
-          />
-        </div>
-      );
-    });
-    return orbitPlanets;
-  };
   return (
     <main>
       <div className="flex items-center justify-center h-screen">
@@ -51,7 +13,7 @@ export default function Home() {
             </div>
             <div className="w-[20px] lg:w-[40px] h-[10px] lg:h-[20px] rounded-b-full border-b-2 border-l-2 border-r-2 lg:border-b-4 lg:border-l-4 border-gray-900 lg:border-r-4 mt-2 lg:mt-4" />
           </div>
-          {renderPlanets(planetsList)}
+          <Orbit />
         </div>
       </div>
       <h1 className="z-[-20] text-white text-4xl md:text-5xl lg:text-6xl w-full text-center absolute top-20 ">

@@ -1,7 +1,7 @@
 const Neptune = () => {
   return (
     <div
-      className={`w-12 md:w-16 lg:w-32 planet neptune animate-[front_38s_linear_infinite]`}
+      className={`w-12 md:w-16 lg:w-32 delay-3 planet neptune animate-[front_38s_linear_infinite]`}
     >
       <div className="flex flex-col items-center w-1/3 pt-2 md:pt-4 lg:pt-8">
         <div className="flex justify-between w-full">

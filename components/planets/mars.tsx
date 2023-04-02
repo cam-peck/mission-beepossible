@@ -1,7 +1,7 @@
 const Mars = () => {
   return (
     <div
-      className={`w-10 md:w-14 lg:w-20 planet mars animate-[front_22s_linear_infinite]`}
+      className={`w-10 md:w-14 lg:w-20 delay-4 planet mars animate-[front_22s_linear_infinite]`}
     >
       <div className="flex flex-col items-center w-1/3 pt-2 md:pt-4">
         <div className="flex justify-between w-full">

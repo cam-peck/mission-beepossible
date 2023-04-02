@@ -313,3 +313,19 @@
     radial-gradient(circle at 50% 55%, rgb(146 146 146) 2%, transparent 2%),
     radial-gradient(circle at 80% 51%, rgb(146 146 146) 4%, transparent 4%);
 }
+
+.delay-1 {
+  animation-delay: -2000ms;
+}
+
+.delay-2 {
+  animation-delay: -4000ms;
+}
+
+.delay-3 {
+  animation-delay: -6000ms;
+}
+
+.delay-4 {
+  animation-delay: -8000ms;
+}

@@ -155,19 +155,37 @@ values ('Saturn', 'Pan', '', 1990, 28);
 insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
 values ('Saturn', 'Daphnis', '', 2005, 8);
 
--- Uranus -- (unfinished) https://en.wikipedia.org/wiki/Moons_of_Uranus
+-- 'Uranus' -- (unfinished) https://en.wikipedia.org/wiki/Moons_of_'Uranus'
 
-insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
-values ('Uranus', 'Cordelia', '', 1986, 43);
-
-insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
-values ('Uranus', 'Ophelia', '', 1986, 48);
-
-insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
-values ('Uranus', 'Bianca', '', 1986, 53);
-
-insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
-values ('Uranus', 'Cressida', '', 1986, 82);
+INSERT INTO "moons" ("planetName", "moonName", "nameHistory", "diameter", "yearDiscovered")
+VALUES
+  ('Uranus',	'Cordelia',	'Daughter of Lear in King Lear',	40.2,	1986),
+('Uranus',	'Ophelia',	'Daughter of Polonius and fiancée of Hamlet in Hamlet',	42.8,	1986),
+('Uranus',	'Bianca',	'Daughter of Baptista in The Taming of the Shrew',	54,	1986),
+('Uranus',	'Creddia',	'Cressida, female protagonist of Troilus and Cressida',	79.6,	1986),
+('Uranus',	'Desdemona',	'Wife of Othello in Othello',	64,	1986),
+('Uranus',	'Juliet',	'Female protagonist of Romeo and Juliet',	93.6,	1986),
+('Uranus',	'Portia',	'Portia, wife of Brutus in Julius Caesar',	135.2,	1986),
+('Uranus',	'Rosalind',	'Daughter of the banished duke in As You Like It',	72,	1986),
+('Uranus',	'Cupid',	'Minor character in Timon of Athens',	18,	2003),
+('Uranus',	'Belinda',	'Protagonist of The Rape of the Lock',	80.6,	1986),
+('Uranus',	'Perdita',	"Daughter of Leontes and Hermione in The Winter's Tale",	30,	1999),
+('Uranus',	'Puck',	"Puck, a mischievous spirit in A Midsummer Night's Dream",	162,	1985),
+('Uranus',	'Mab',	'Midwife of the fairies in Romeo and Juliet',	25,	2003),
+('Uranus',	'Miranda',	'Miranda, lead character in The Tempest',	471.6,	1948),
+('Uranus',	'Ariel',	'Sylph (a type of air spirit) in The Rape of the Lock',	1157.8,	1851),
+('Uranus',	'Umbriel',	'Evil spirit in The Rape of the Lock',	1169.4,	1851),
+('Uranus',	'Titania',	"Queen of the fairies in A Midsummer Night's Dream",	1576.8,	1787),
+('Uranus',	'Oberon',	"King of the fairies in A Midsummer Night's Dream",	1522.8,	1787),
+('Uranus',	'Francisco',	'Lord in The Tempest',	22,	2003),
+('Uranus',	'Caliban',	'Caliban, the monstrous slave in The Tempest',	72,	1997),
+('Uranus',	'Stephano',	'Drunken butler in The Tempest',	32,	1999),
+('Uranus',	'Trinculo',	'Jester in The Tempest',	18,	2001),
+('Uranus',	'Sycorax',	'Mother of Caliban in The Tempest',	165,	1997),
+('Uranus',	'Margaret',	'Gentlewoman attending on Hero in Much Ado About Nothing',	20,	2003),
+('Uranus',	'Prospero',	'Rightful Duke of Milan in The Tempest',	50,	1999),
+('Uranus',	'Setebos',	'Deity worshipped by Sycorax in The Tempest',	48,	1999),
+('Uranus',	'Ferdinand',	'Son of the King of Naples in The Tempest',	20,	2003)
 
 -- Neptune -- (unfinished) https://en.wikipedia.org/wiki/Moons_of_Saturn
 
@@ -183,6 +201,22 @@ values ('Neptune', 'Depsina', '', 1989, 156);
 insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
 values ('Neptune', 'Galatea', '', 1989, 175);
 
+INSERT INTO "moons" ("planetName", "moonName", "nameHistory", "diameter", "yearDiscovered")
+VALUES
+('Neptune',	'Naiad',	'The Naiads, female spirits (nymphs) associated with bodies of freshwater',	66,	1989),
+('Neptune',	'Thalassa',	'The sea goddess Thalassa',	82,	1989),
+('Neptune',	'Despina',	'The nymph Despoina',	150,	1989),
+('Neptune',	'Galatea',	'Galatea, one of the Nereids',	174.8,	1989),
+('Neptune',	'Larissa',	'Larissa, nymph and lover of Poseidon',	194,	1981),
+('Neptune',	'Hippocamp',	'Hippocampus, a mythical creature associated with Poseidon',	18,	2013),
+('Neptune',	'Proteus',	'The shapeshifting sea god Proteus',	420,	1989),
+('Neptune',	'Triton',	'The sea god Triton',	2706.8,	1846),
+('Neptune',	'Nereid',	'The Nereids, a group of sea nymphs',	340,	1949),
+('Neptune',	'Halimede',	'Halimede, one of the Nereids',	62,	2002),
+('Neptune',	'Sao',	'Sao, one of the Nereids',	40,	2002),
+('Neptune',	'Laomedeia',	'Laomedeia, one of the Nereids',	40,	2002),
+('Neptune',	'Psamathe',	'Psamathe, one of the Nereids',	38,	2003),
+('Neptune',	'Neso',	'Neso, one of the Nereids',	60,	2002)
 -- Pluto --
 
 insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")

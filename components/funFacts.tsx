@@ -34,7 +34,11 @@ const FactContainer = (props: funFacts) => {
           <div
             className="pl-4 text-2xl font-bold text-white bg-gray-400 rounded-t cursor-pointer bg-opacity-20"
             onClick={() => {
-              setFact(factNum);
+              if (fact === factNum) {
+                setFact(0);
+              } else {
+                setFact(factNum);
+              }
             }}
           >
             Fun Fact #{factNum}

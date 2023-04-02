@@ -21,7 +21,7 @@ const AboutUs = () => {
         application!
       </p>
       <div className="flex flex-wrap w-full">
-        <div className="basis-full md:basis-1/2 pb-8">
+        <div className="basis-full md:basis-1/2 pb-8 lg:pb-0">
           <div className="flex flex-col items-center">
             <Image
               width="250"
@@ -50,6 +50,9 @@ const AboutUs = () => {
               >
                 LinkedIn
               </a>
+            </p>
+            <p className="text-white italic text-lg md:text-2xl pt-2">
+              Design &amp; Front-End
             </p>
           </div>
         </div>
@@ -82,6 +85,9 @@ const AboutUs = () => {
               >
                 LinkedIn
               </a>
+            </p>
+            <p className="text-white italic text-lg md:text-2xl">
+              Database &amp; Deployment
             </p>
           </div>
         </div>

@@ -15,7 +15,6 @@ const Moons = (props: MoonProps) => {
 
   useEffect(() => {
     const fetchMoonData = async () => {
-      setLoading(true);
       const req = {
         method: 'GET',
       };

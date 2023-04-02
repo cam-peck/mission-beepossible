@@ -5,6 +5,7 @@ import Bee from './bee';
 
 interface MoonProps {
   planetName: string | string[] | undefined;
+  setError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Moons = (props: MoonProps) => {
@@ -24,8 +25,8 @@ const Moons = (props: MoonProps) => {
         const moonData = await moonResponse.json();
         setMoonData(moonData);
       } catch (err) {
-        console.error('An unexpected error occured');
-        // error handling needs added here!
+        console.error(err);
+        props.setError(true);
       }
     };
     fetchMoonData();

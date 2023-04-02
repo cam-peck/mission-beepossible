@@ -114,7 +114,7 @@ export default function Planets() {
               funFact3={funFact3}
             />
           </div>
-          <Moons planetName={planetName} />
+          <Moons planetName={planetName} setError={setError} />
         </div>
       </>
     );

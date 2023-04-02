@@ -10,8 +10,8 @@ const ErrorPage = (props: ErrorPage) => {
     <div className="flex flex-wrap flex-row-reverse justify-center h-screen items-center">
       <div className="basis-full md:basis-1/2 p-4 text-white text-lg md:text-2xl">
         <p>
-          Sorry, but {props.errorName} isn&apos;t one of the planets in our
-          Solar System.
+          Sorry, but {props.errorName} isn&apos;t one of the planets or moons in
+          our Solar System.
         </p>
         <p>
           Please choose one from our navigation menu or click{' '}

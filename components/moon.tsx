@@ -5,17 +5,17 @@ import Bee from './bee';
 
 interface MoonProps {
   planetName: string | string[] | undefined;
+  setError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Moons = (props: MoonProps) => {
   const [moonData, setMoonData] = useState<moon[]>();
   const [loading, setLoading] = useState<boolean>(true);
   const [showMoon, setShowMoon] = useState<string>('');
-  const { planetName } = props;
+  const { planetName, setError } = props;
 
   useEffect(() => {
     const fetchMoonData = async () => {
-      setLoading(true);
       const req = {
         method: 'GET',
       };
@@ -25,13 +25,13 @@ const Moons = (props: MoonProps) => {
         const moonData = await moonResponse.json();
         setMoonData(moonData);
       } catch (err) {
-        console.error('An unexpected error occured');
-        // error handling needs added here!
+        console.error(err);
+        setError(true);
       }
     };
     fetchMoonData();
     setLoading(false);
-  }, [planetName]);
+  }, [planetName, setError]);
 
   const renderMoons = (data: moon[]) => {
     const moonLists = data.map((moon: moon) => {

@@ -126,6 +126,14 @@ const Navigation = () => {
                 Pluto
               </Link>
             </li>
+            <li>
+              <Link
+                className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
+                href="/about"
+              >
+                About Us
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

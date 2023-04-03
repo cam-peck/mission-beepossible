@@ -1,47 +1,66 @@
-# Mission Beepossible
+# Mission Beepossible 🐝
 
 A full-stack Next.js (w/TypeScript) application for future astronauts to learn about the universe.
 
-## Why Build This?
+## Why Build This? 🤔
 
 The Dear Junior Dev Discord community challenge for this past week was to build an application to teach other about the solar system. Requirements were as follows:
 
 ```
 Planets:
 
--- Each planet of the solar system must have its own profile page. (COMPLETED: used next.js pages)
--- Each page must include at a minimum (Name of the planet, size, distance from the Sun, three identifying facts, solid or gas core, and a visual representation of the planet) (COMPLETED: data grabbed from the database)
--- NOTE: No images, assets, emojis, or SVGs are permitted. The visual representation of each planet must be made ENTIRELY out of CSS. (CHECK!)
--- If the planet has a moon, you must display the following information for every moon (Name, history behind name, and size). (COMPLETED: data grabbed from database)
--- Planet pages must include at least two different components that are NOT used on your homepage. (COMPLETED: Hover modal, Accordion Menu, Loading modal, Baby Planet)
--- If a planet has more than one moon, the moon information must be displayed in repeating elements. (COMPLETED: Jupiter and Saturn have a lot of moons. We used a reusable moons component and used `map` to generate all of the moons.)
--- All planet and moon content MUST be stored in a database. (CHECK!)
+-- Each planet of the solar system must have its own profile page.
+
+We utilized Next Pages to create the profile page for the planet. By using slugs, we could take the planet name in the url to query our database for information. This set up allowed us to create on planet profile page that had the ability to render the information for any of the 9 planets.
+
+-- Each page must include at a minimum (Name of the planet, size, distance from the Sun, three identifying facts, solid or gas core, and a visual representation of the planet)
+
+This data is represented on each of the pages. The identifying facts are fun facts in an accordion set up and the solid or gas core is represented through a modal hover.
+
+-- NOTE: No images, assets, emojis, or SVGs are permitted. The visual representation of each planet must be made ENTIRELY out of CSS.
+-- If the planet has a moon, you must display the following information for every moon (Name, history behind name, and size).
+-- Planet pages must include at least two different components that are NOT used on your homepage.
+
+Each planet was created using vanilla CSS but responsive sizing and page layout done with TailwindCSS. The two components on the planet page are modals for the solid or gas core (also for moon data!), and the fun facts.
+
+-- If a planet has more than one moon, the moon information must be displayed in repeating elements.
+
+Cameron decided that we should go all or nothing on the moons. We spent a good few hours inputting moon data for the moons (Jupiter and Saturn have a lot!). To display the moons, we created a moon component that would take information and render the moon. This way we could `map` through the moons data we fetch and render all of the moons.
+-- All planet and moon content MUST be stored in a database.
 
 
 Backend:
 
--- You must use foreign keys. (YUPP! Planets are linked to moons via a foreign key.)
--- Planets and Moons must be stored separate from one another. (CHECK!)
--- You must incorporate one ENUM for the planet data. (CHECK! I used one enum for planetName, and another for planetType.)
+-- You must use foreign keys.
+
+Moons are linked to the planets using a foreign key of planetName.
+
+-- Planets and Moons must be stored separate from one another.
+
+Planets and moons have separate tables.
+
+-- You must incorporate one ENUM for the planet data.
+
+planetName and planetType are both ENUMs.
 
 Homepage:
 
--- The homepage should be an overview of the solar system. (CHECK!)
--- The data included will be up to each team. (DONE!)
--- The homepage must include at least two components that are NOT used on any planet page. (CHECK! Solar System Component, 9 planets, Navbar)
--- Homepage content does not need to be stored in a database and can be coded into your components. (CHECK!)
+-- The homepage should be an overview of the solar system.
+-- The data included will be up to each team.
+-- The homepage must include at least two components that are NOT used on any planet page.
 
-REAME:
+We utilized a navbar are the top (collapsible with responsive design) to link to the planets as well as a Solar System component to display all of the planets orbiting the sun!
 
--- Your README must include instructions for me to spin up the project locally, as well as an overview of the tech and/or libraries used. (CHECK!)
--- It should also include a list of the Quackathon requirements and how those were met or exceeded by your team. (CHECK!)
+-- Homepage content does not need to be stored in a database and can be coded into your components.
+
+The only planet data we used on the homepage was the names of the planets for our links to each planet page.
 ```
 
-## Database Schema
+## Database Schema 📰
 
-![DEMO](public/readme-db.png)
+![Database](public/readme-db.png 'Image of the database schema')
 
-## Techonologies Used
+## Techonologies Used 💻
 
 ### Full-stack
 
@@ -62,7 +81,7 @@ REAME:
 - Supabase (for deployment)
 - Vercel (for deployment)
 
-## Live Deployment
+## Live Deployment 🔗
 
 Check out the site --> https://mission-beepossible.vercel.app/
 
@@ -78,21 +97,21 @@ This was a big step up over the previous weekend flex-box project!
 
 - After we got done planning, we spent the remainder of the week working on the code. We moved in chunks, submitting all PRs to GitHub for the other person to check before merging into main. There were a LOT of zoom calls here... (we're on one now, as we write this up!) We did our best to stay out of each others' files, but did have to resolve a few merge conflicts. (Luckily, they weren't too bad!!!) Once we finished up all of the primary features on Friday, I got the cloud database setup via Supabase, and we deployed the website early Sunday morning. We cleaned up the remaining moon data on Sunday along with some lingering bugs and then submitted the project!
 
-## Preview
+## Preview 👀
 
 ### Home Page!
 
-![DEMO](public/readme-home.gif)
+![Home](public/readme-home.gif 'Viewing the Solar System')
 
 ### Planet Page!
 
-![DEMO](public/readme-planet-data.gif)
+![Planet](public/readme-planet-data.gif "Viewing the planet's page")
 
 ### Mobile View!
 
-![DEMO](public/readme-responsive.gif)
+![Responsive](public/readme-responsive.gif 'Showing off the responsive layout')
 
-## Development
+## Development 👨‍💻
 
 ### System Requirements
 

@@ -100,22 +100,43 @@ cd flex-bee
 2. Make a copy of the provided `.env.example` file. Name your copy `.env`.
 
 ```
-cp .env.example .env
+cp .example.env .env
 ```
 
-3. Sync your database with prisma.
+3. Open your `schema.prisma` file. Replace the datasource section with...
+
+```
+datasource db {
+  provider  = "postgresql"
+  url       = env("DEV_DATABASE_URL")
+}
+```
+
+4. Sync your database with prisma.
 
 ```
 npm run prisma:schema
 ```
 
-4. Generate your prisma client.
+5. Generate your prisma client.
 
 ```
 npm run prisma:generate
 ```
 
-5. You're good to go! To start developing...
+6. Seed your database with all of the planet data.
+
+```
+npm run db:import
+```
+
+7. If you're on Windows and for some reason the `sh` script throws an error, use the script below to remove invisible newline chars. The most likely culprits are the `.env` and `import.sh` files.
+
+```
+sed -i 's/\r$//' <filename>
+```
+
+8. You're good to go! To start developing...
 
 ```
 npm run dev

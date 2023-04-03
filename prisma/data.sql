@@ -405,18 +405,6 @@ VALUES
 
 -- Neptune -- (unfinished) https://en.wikipedia.org/wiki/Moons_of_Saturn
 
-insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
-values ('Neptune', 'Naiad', '', 1989, 60);
-
-insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
-values ('Neptune', 'Thalassa', '', 1989, 81);
-
-insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
-values ('Neptune', 'Depsina', '', 1989, 156);
-
-insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
-values ('Neptune', 'Galatea', '', 1989, 175);
-
 INSERT INTO "moons" ("planetName", "moonName", "nameHistory", "diameter", "yearDiscovered")
 VALUES
 ('Neptune',	'Naiad',	'The Naiads, female spirits (nymphs) associated with bodies of freshwater',	66,	1989),

@@ -105,7 +105,7 @@ git clone https://github.com/cam-peck/mission-beepossible
 cd mission-beepossible
 ```
 
-2. Make a copy of the provided `.env.example` file. Name your copy `.env`.
+2. Make a copy of the provided `.example.env` file. Name your copy `.env`.
 
 ```
 cp .example.env .env

@@ -37,6 +37,10 @@ REAME:
 -- It should also include a list of the Quackathon requirements and how those were met or exceeded by your team. (CHECK!)
 ```
 
+## Database Schema
+
+![DEMO](public/readme-db.png)
+
 ## Techonologies Used
 
 ### Full-stack

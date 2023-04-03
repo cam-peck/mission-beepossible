@@ -163,9 +163,6 @@ insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", 
 values ('Jupiter', 'S/2016 J 3', 'TBD', 2016, 2);
 
 insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
-values ('Jupiter', 'S/2016 J 1', 'TBD', 2016, 1);
-
-insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
 values ('Jupiter', 'Pasithee', 'Named after one the Graces.', 2001, 2);
 
 insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
@@ -238,9 +235,6 @@ insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", 
 values ('Jupiter', 'S/2017 J 6', 'TBD', 2017, 2);
 
 insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
-values ('Jupiter', 'S/2017 J 6', 'TBD', 2017, 2);
-
-insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
 values ('Jupiter', 'Kalyke', 'Named for the mother of Endymion by Zeus.', 2000, 7);
 
 insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")
@@ -290,108 +284,13 @@ values ('Jupiter', 'Kore', 'Named after Persephone -- Kore is another name for h
 
 -- Saturn --
 
-INSERT INTO "moons" ("planetName", "moonName", "nameHistory", "diameter", "yearDiscovered") 
-VALUES 
-    ('Saturn', 'S/2009 S 1', 'TBD', 1, 2009),
-	('Saturn', '(moonlets)', 'Small little dudes!', 1 ,2006),
-	('Saturn', 'Pan', 'Named after the Pagan Sex God or the Greek God of Shepherds.', 28, 1990),
-	('Saturn', 'Daphnis', 'Named after a love-struck shepherd.', 8, 2005),
-	('Saturn', 'Atlas', 'Named after the son of Titan, Atlas.', 30, 1980),
-	('Saturn', 'Prometheus', 'Named after Prometheus, a Titan in Greek Mythology.', 86 ,1980),
-	('Saturn', 'Pandora', 'Named after Pandora from Greek Mythology.', 81, 1980),
-	('Saturn', 'Epimetheus', 'Named after Epimetheus, the brother of Prometheus.', 116 ,1966),
-	('Saturn', 'Janus', 'Named after the two-faced Roman god Janus.', 179, 1966),
-	('Saturn', 'Aegaeon', 'Named after one of the hekatonkheires.', 1, 2008),
-	('Saturn', 'Mimas', 'Named after the offspring of Gaia from Greek Mythology.', 396, 1789),
-	('Saturn', 'Methone', 'Named after one of the seven Alkyonides.', 3, 2004),
-	('Saturn', 'Anthe', 'Named after one of the seven Alykonides.', 1,  2007),
-	('Saturn', 'Pallene', 'Named after one of the seven Alykonides.', 4,  2004),
-	('Saturn', 'Enceladus', 'Named after a giant from Greek Mythology.', 504, 1789),
-	('Saturn', 'Tethys', 'Named after the titan Tethys from Greek Mythology.', 1062, 1684.),
-	('Saturn', 'Telesto', 'Named after an Oceanid from Greek Mythology.',  25, 1980),
-	('Saturn', 'Calypso',  'Named after the woman who fell in love with Odysseus in Greek Mythology.', 21, 1980);
--- 	('†Dione','1122.8
--- (1128 × 1123 × 1119)',1684.0),
--- 	('Helene','35.2
--- (43 × 38 × 26)',1980.0),
--- 	('Polydeuces','2.6
--- (3.0 × 2.4 × 1.0)',2004.0),
--- 	('†Rhea','1527.6
--- (1530 × 1526 × 1525)',1672.0),
--- 	('♠Titan','5149.46
--- (5149 × 5149 × 5150)',1655.0),
--- 	('Hyperion','270.0
--- (360 × 266 × 205)',1848.0),
--- 	('†Iapetus','1468.6
--- (1491 × 1491 × 1424)',1671.0),
--- 	('‡S/2019 S 1','≈ 3',2019.0),
--- 	('‡Kiviuq','≈ 16',2000.0),
--- 	('‡Ijiraq','≈ 12',2000.0),
--- 	('♣Phoebe','213.0
--- (219 × 217 × 204)',1898.0),
--- 	('‡Paaliaq','≈ 22',2000.0),
--- 	('♣Skathi','≈ 8',2000.0),
--- 	('♣S/2007 S 2','≈ 4',2007.0),
--- 	('♣S/2004 S 37','≈ 4',2004.0),
--- 	('♦Albiorix','28.6',2000.0),
--- 	('♦Bebhionn','≈ 6',2004.0),
--- 	('‡S/2004 S 29','≈ 4',2004.0),
--- 	('‡S/2004 S 31','≈ 4',2004.0),
--- 	('♦Erriapus','≈ 10',2000.0),
--- 	('♣Skoll','≈ 6',2006.0),
--- 	('‡Tarqeq','≈ 7',2007.0),
--- 	('‡Siarnaq','39.3',2000.0),
--- 	('♦Tarvos','≈ 15',2000.0),
--- 	('♣Hyrrokkin','≈ 8',2004.0),
--- 	('♣Greip','≈ 6',2006.0),
--- 	('♣S/2004 S 13','≈ 3',2004.0),
--- 	('♣Mundilfari','≈ 7',2000.0),
--- 	('♣S/2006 S 1','≈ 5',2006.0),
--- 	('♣Gridr','≈ 4',2004.0),
--- 	('♣Bergelmir','≈ 6',2004.0),
--- 	('♣Jarnsaxa','≈ 6',2006.0),
--- 	('♣Narvi','≈ 7',2003.0),
--- 	('♣Suttungr','≈ 7',2000.0),
--- 	('♣S/2004 S 17','≈ 3',2004.0),
--- 	('♣S/2007 S 3','≈ 5',2007.0),
--- 	('♣Hati','≈ 6',2004.0),
--- 	('♣S/2004 S 12','≈ 4',2004.0),
--- 	('♣Eggther','≈ 4',2004.0),
--- 	('♣Farbauti','≈ 5',2004.0),
--- 	('♣Thrymr','≈ 7',2000.0),
--- 	('♣Bestla','≈ 7',2004.0),
--- 	('♣S/2004 S 7','≈ 5',2004.0),
--- 	('♣Angrboda','≈ 3',2004.0),
--- 	('♣Aegir','≈ 6',2004.0),
--- 	('♣Beli','≈ 3',2004.0),
--- 	('♣Gerd','≈ 3',2004.0),
--- 	('♣Gunnlod','≈ 4',2004.0),
--- 	('♣S/2006 S 3','≈ 5',2006.0),
--- 	('♣Skrymir','≈ 4',2004.0),
--- 	('♣S/2004 S 28','≈ 4',2004.0),
--- 	('♣Alvaldi','≈ 4',2004.0),
--- 	('♣Kari','≈ 7',2006.0),
--- 	('♣Geirrod','≈ 4',2004.0),
--- 	('♣Fenrir','≈ 4',2004.0),
--- 	('♣Surtur','≈ 6',2006.0),
--- 	('♣Loge','≈ 6',2006.0),
--- 	('♣Ymir','≈ 18',2000.0),
--- 	('♣S/2004 S 21','≈ 3',2004.0),
--- 	('♣S/2004 S 39','≈ 2',2004.0),
--- 	('♦S/2004 S 24','≈ 3',2004.0),
--- 	('♣S/2004 S 36','≈ 3',2004.0),
--- 	('♣Thiazzi','≈ 4',2004.0),
--- 	('♣S/2004 S 34','≈ 3',2004.0),
--- 	('♣Fornjot','≈ 6',2004.0),
--- 	('♣S/2004 S 26','≈ 4',2004.0);
-
 INSERT INTO "moons" ("planetName", "moonName", "nameHistory", "diameter", "yearDiscovered")
 VALUES
 ('Saturn',	'S/2009 S 1',	'TBD',	300,	2009),
 ('Saturn',	'(moonlets)',	'TBD',	1,	2006),
 ('Saturn',	'Pan',	'The god of shepherds, Pan',	28.2,	1990),
 ('Saturn',	'Daphnis',	'Named after Daphnis, a shepherd, pipes player, and pastoral poet',	8,	2005),
-('Saturn',	'Atlas',	"Named after Atlas because the moon appears to hold the rings on its shoulders",	18.77,	1980),
+('Saturn',	'Atlas',	'Named after Atlas because the moon appears to hold the rings on his shoulders.',	18.77,	1980),
 ('Saturn',	'Prometheus',	'Named after the Titan god of fire',	53.56,	1980),
 ('Saturn',	'Pandora',	'Named after the first human woman created by Hephaestus',	50.58,	1980),
 ('Saturn',	'Epimetheus',	'Named after the brother of Prometheus',	72.2,	1966),
@@ -470,7 +369,7 @@ VALUES
 ('Saturn',	'Thiazzi',	'Named after son of Alvaldi who kidnapped the goddess Iounn in Norse mythology',	4,	2004),
 ('Saturn',	'S/2004 S 34',	'TBD',	3,	2004),
 ('Saturn',	'Fornjot',	'Named after a giant in Norse mythology',	6,	2004),
-('Saturn',	'S/2004 S 26',	'TBD',	4,	2004)
+('Saturn',	'S/2004 S 26',	'TBD',	4,	2004);
 
 -- 'Uranus' -- (unfinished) https://en.wikipedia.org/wiki/Moons_of_'Uranus'
 
@@ -486,14 +385,14 @@ VALUES
 ('Uranus',	'Rosalind',	'Daughter of the banished duke in As You Like It',	72,	1986),
 ('Uranus',	'Cupid',	'Minor character in Timon of Athens',	18,	2003),
 ('Uranus',	'Belinda',	'Protagonist of The Rape of the Lock',	80.6,	1986),
-('Uranus',	'Perdita',	"Daughter of Leontes and Hermione in The Winter's Tale",	30,	1999),
-('Uranus',	'Puck',	"Puck, a mischievous spirit in A Midsummer Night's Dream",	162,	1985),
+('Uranus',	'Perdita',	'Daughter of Leontes and Hermione in The Winter''s Tale',	30,	1999),
+('Uranus',	'Puck',	'Puck, a mischievous spirit in A Midsummer Night''s Dream',	162,	1985),
 ('Uranus',	'Mab',	'Midwife of the fairies in Romeo and Juliet',	25,	2003),
 ('Uranus',	'Miranda',	'Miranda, lead character in The Tempest',	471.6,	1948),
 ('Uranus',	'Ariel',	'Sylph (a type of air spirit) in The Rape of the Lock',	1157.8,	1851),
 ('Uranus',	'Umbriel',	'Evil spirit in The Rape of the Lock',	1169.4,	1851),
-('Uranus',	'Titania',	"Queen of the fairies in A Midsummer Night's Dream",	1576.8,	1787),
-('Uranus',	'Oberon',	"King of the fairies in A Midsummer Night's Dream",	1522.8,	1787),
+('Uranus',	'Titania',	'Queen of the fairies in A Midsummer Night''s Dream',	1576.8,	1787),
+('Uranus',	'Oberon',	'King of the fairies in A Midsummer Night''s Dream',	1522.8,	1787),
 ('Uranus',	'Francisco',	'Lord in The Tempest',	22,	2003),
 ('Uranus',	'Caliban',	'Caliban, the monstrous slave in The Tempest',	72,	1997),
 ('Uranus',	'Stephano',	'Drunken butler in The Tempest',	32,	1999),
@@ -502,7 +401,7 @@ VALUES
 ('Uranus',	'Margaret',	'Gentlewoman attending on Hero in Much Ado About Nothing',	20,	2003),
 ('Uranus',	'Prospero',	'Rightful Duke of Milan in The Tempest',	50,	1999),
 ('Uranus',	'Setebos',	'Deity worshipped by Sycorax in The Tempest',	48,	1999),
-('Uranus',	'Ferdinand',	'Son of the King of Naples in The Tempest',	20,	2003)
+('Uranus',	'Ferdinand',	'Son of the King of Naples in The Tempest',	20,	2003);
 
 -- Neptune -- (unfinished) https://en.wikipedia.org/wiki/Moons_of_Saturn
 
@@ -533,7 +432,7 @@ VALUES
 ('Neptune',	'Sao',	'Sao, one of the Nereids',	40,	2002),
 ('Neptune',	'Laomedeia',	'Laomedeia, one of the Nereids',	40,	2002),
 ('Neptune',	'Psamathe',	'Psamathe, one of the Nereids',	38,	2003),
-('Neptune',	'Neso',	'Neso, one of the Nereids',	60,	2002)
+('Neptune',	'Neso',	'Neso, one of the Nereids',	60,	2002);
 -- Pluto --
 
 insert into "moons" ("planetName", "moonName", "nameHistory", "yearDiscovered", "diameter")

@@ -1,12 +1,41 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
 const Navigation = () => {
   const [showNavigation, setShowNavigation] = useState<boolean>(false);
   const display = showNavigation ? '' : 'hidden';
 
+
+
+  const useOutsideClick = (callback: () => void) => {
+    const ref = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      const handleClick = (event: MouseEvent) => {
+        if (ref.current && !ref.current.contains(event.target as Node)) {
+          callback();
+        }
+      };
+
+      document.addEventListener('click', handleClick, true);
+
+      return () => {
+        document.removeEventListener('click', handleClick, true);
+      };
+    }, [callback, ref]);
+
+    return ref;
+  };
+
+  const handleClickOutside = () => {
+    setShowNavigation(false);
+  };
+
+  const ref = useOutsideClick(handleClickOutside);
+
+
   return (
-    <nav
+    <nav ref={ref}
       className="fixed z-50 flex items-center justify-between w-full py-4 bg-opacity-50 bg-gray-900 flex-nowrap text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 lg:flex-wrap lg:justify-start"
       data-te-navbar-ref
     >
@@ -46,7 +75,9 @@ const Navigation = () => {
             className="flex flex-col pl-0 mr-auto list-style-none text-white lg:flex-row"
             data-te-navbar-nav-ref
           >
-            <li>
+            <li onClick={() => {
+              setShowNavigation(!showNavigation);
+            }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/"
@@ -54,7 +85,7 @@ const Navigation = () => {
                 Home
               </Link>
             </li>
-            <li>
+            <li onClick={() => { setShowNavigation(!showNavigation) }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/mercury"
@@ -62,7 +93,7 @@ const Navigation = () => {
                 Mercury
               </Link>
             </li>
-            <li>
+            <li onClick={() => { setShowNavigation(!showNavigation) }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/venus"
@@ -70,7 +101,7 @@ const Navigation = () => {
                 Venus
               </Link>
             </li>
-            <li>
+            <li onClick={() => { setShowNavigation(!showNavigation) }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/earth"
@@ -78,7 +109,7 @@ const Navigation = () => {
                 Earth
               </Link>
             </li>
-            <li>
+            <li onClick={() => { setShowNavigation(!showNavigation) }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/mars"
@@ -86,7 +117,7 @@ const Navigation = () => {
                 Mars
               </Link>
             </li>
-            <li>
+            <li onClick={() => { setShowNavigation(!showNavigation) }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/jupiter"
@@ -94,7 +125,7 @@ const Navigation = () => {
                 Jupiter
               </Link>
             </li>
-            <li>
+            <li onClick={() => { setShowNavigation(!showNavigation) }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/saturn"
@@ -102,7 +133,7 @@ const Navigation = () => {
                 Saturn
               </Link>
             </li>
-            <li>
+            <li onClick={() => { setShowNavigation(!showNavigation) }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/uranus"
@@ -110,7 +141,7 @@ const Navigation = () => {
                 Uranus
               </Link>
             </li>
-            <li>
+            <li onClick={() => { setShowNavigation(!showNavigation) }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/neptune"
@@ -118,7 +149,7 @@ const Navigation = () => {
                 Neptune
               </Link>
             </li>
-            <li>
+            <li onClick={() => { setShowNavigation(!showNavigation) }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/pluto"
@@ -126,7 +157,7 @@ const Navigation = () => {
                 Pluto
               </Link>
             </li>
-            <li>
+            <li onClick={() => { setShowNavigation(!showNavigation) }}>
               <Link
                 className="text-lg p-3 rounded basis-1/4 md:basis-1/12 lg:hover:bg-gray-400 lg:hover:bg-opacity-50"
                 href="/about"
